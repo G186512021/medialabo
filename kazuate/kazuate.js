@@ -26,6 +26,7 @@ function hantei() {
         console.log("まちがい．答えはもっと小さいですよ");
     } else if (yoso==kotae) {
         console.log("正解です．おめでとう!");
+        System.exit(0);
     }
  }
  if (kaisu>3) {
