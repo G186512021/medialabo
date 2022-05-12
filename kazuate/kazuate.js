@@ -19,13 +19,18 @@ function hantei() {
  // 課題3-1：ここの判定処理を作成する
  kaisu++;
  console.log(kaisu+"回目の予想: "+yoso);
-     if (yoso<kotae) {
-         console.log("まちがい．答えはもっと大きいですよ");
-     } else if (yoso>kotae) {
-         console.log("まちがい．答えはもっと小さいですよ");
-     } else if (yoso==kotae) {
-         console.log("正解です．おめでとう!");
-     }
+ if (kaisu<=3) {
+    if (yoso<kotae) {
+        console.log("まちがい．答えはもっと大きいですよ");
+    } else if (yoso>kotae) {
+        console.log("まちがい．答えはもっと小さいですよ");
+    } else if (yoso==kotae) {
+        console.log("正解です．おめでとう!");
+    }
+ }
+ if (kaisu>3) {
+     console.log("答えは " + kotae + " でした．すでにゲームは終わっています");
+ }
 /* for (let i = 1; i <= 3; i++) {
      console.log(i+"回目の予想: "+yoso);
      if (yoso<kotae) {
