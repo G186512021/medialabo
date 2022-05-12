@@ -52,5 +52,5 @@ let data = {
   "main": {
     "temp_max":20.5,
     "temp_min":15.5,
-  }
-}
+  },
+};
