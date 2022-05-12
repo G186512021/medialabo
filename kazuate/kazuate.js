@@ -25,11 +25,13 @@ function hantei() {
          console.log("まちがい．答えはもっと小さいですよ");
      } else if (yoso==katae) {
          console.log("正解です．おめでとう!");
+         break;
      }
  }
- 
+
  for (let j = 4; j <= yoso; j++) {
      console.log("答えは " + kotae + " でした．すでにゲームは終わっています");
+     break;
  }
  
     //        ページに表示する方法はまだ習っていないので
