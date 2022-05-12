@@ -17,7 +17,8 @@ function hantei() {
     let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
 
  // 課題3-1：ここの判定処理を作成する
- console.log("1回目の予想: "+yoso);
+ kaisu++;
+ console.log(kaisu+"回目の予想: "+yoso);
      if (yoso<kotae) {
          console.log("まちがい．答えはもっと大きいですよ");
      } else if (yoso>kotae) {
