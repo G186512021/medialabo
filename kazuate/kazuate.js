@@ -25,6 +25,7 @@ function hantei() {
          console.log("まちがい．答えはもっと小さいですよ");
      } else if (yoso==4) {
          console.log("正解です．おめでとう!");
+         break;
      }
  }
  for (let j = 4; j <= yoso; j++) {
