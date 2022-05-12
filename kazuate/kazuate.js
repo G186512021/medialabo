@@ -17,16 +17,17 @@ function hantei() {
     let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
 
  // 課題3-1：ここの判定処理を作成する
- for (let i = 0; i < yoso; i++) {
-     if (hantei<4) {
+ for (let i = 1; i <= 3; i++) {
+     console.log(i+"回目の予想: "+yoso);
+     if (yoso<4) {
          console.log("まちがい．答えはもっと大きいですよ");
-     } else if (hantei>4) {
+     } else if (yoso>4) {
          console.log("まちがい．答えはもっと小さいですよ");
-     } else if (hantei==4) {
+     } else if (yoso==4) {
          console.log("正解です．おめでとう!");
      }
  }
- for (let j = 3; j < yoso; j++) {
+ for (let j = 4; j <= yoso; j++) {
      console.log("答えは " + kotae + " でした．すでにゲームは終わっています");
  }0
     //        ページに表示する方法はまだ習っていないので
