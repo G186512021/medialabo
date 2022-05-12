@@ -23,7 +23,7 @@ function hantei() {
          console.log("まちがい．答えはもっと大きいですよ");
      } else if (yoso>kotae) {
          console.log("まちがい．答えはもっと小さいですよ");
-     } else if (yoso==katae) {
+     } else if (yoso==kotae) {
          console.log("正解です．おめでとう!");
          break;
      }
