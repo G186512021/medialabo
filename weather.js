@@ -46,11 +46,5 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-let data2 = {
-  "name": "カイロ",
-  "main": {
-    "temp_max":20.5,
-    "temp_min":15.5,
-  },
-};
-console.log(data2);
+
+console.log(data);
