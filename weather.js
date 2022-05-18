@@ -1,4 +1,4 @@
-/*let data = {
+let data = {
   "coord": {
     "lon": 116.3972,
     "lat": 39.9075
@@ -43,16 +43,14 @@
   "id": 1816670,
   "name": "北京市",
   "cod": 200
-};*/
+};
 
 ////////// 課題3-2 ここからプログラムを書こう
-let data = {
+let data2 = {
   "name": "カイロ",
   "main": {
     "temp_max":20.5,
     "temp_min":15.5,
   },
 };
-console.log(name);
-console.log(temp_max);
-console.log(temp_min);
+console.log(data2);
