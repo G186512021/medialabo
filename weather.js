@@ -53,4 +53,4 @@ let data2 = {
     "temp_min":15.5,
   },
 };
-console.log(data2);
+console.log("カイロ"+data2);
