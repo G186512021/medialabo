@@ -53,3 +53,6 @@ let data = {
     "temp_min":15.5,
   },
 };
+console.log(name);
+console.log(temp_max);
+console.log(temp_min);
