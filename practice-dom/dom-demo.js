@@ -21,11 +21,11 @@ let oceans = [
   ]
   ul = document.createElement('ul');
   for (let o of oceans) {
-      ul.insertAdjacentElement('afterend', oceans);
+      ul.insertAdjacentElement('afterend', h2sevenOcean);
   }
 
 
   let h2s = document.querySelectorAll('h2');
   for (let h2 of h2s ) {
-    h2.style.color = 'palegreen';
+    h2.style.backgroundColor = 'palegreen';
   }
