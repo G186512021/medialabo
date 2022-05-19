@@ -21,7 +21,7 @@ let oceans = [
   ]
   ul = document.createElement('ul');
   for (let o of oceans) {
-      ul.insertAdjacentElement('afterend',h2sevenOcean)
+      ul.insertAdjacentElement('afterend', h2sevenOcean);
   }
 
 
