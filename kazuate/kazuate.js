@@ -14,25 +14,26 @@ function hantei() {
     let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
 
  // 課題3-1：ここの判定処理を作成する
- let p = document.querySelector('p#result');
+ let p2 = document.querySelector('p#result');
+ let p;
+ p = document.createElement('p');
+ p2.insertAdjacentElement('beforeend',p);
 
  kaisu++;
- console.log(kaisu+"回目の予想: "+yoso);
+ p.textContent = kaisu+'回目の予想: '+yoso;
  if (kaisu<=3) {
     if (yoso<kotae) {
-        console.log("まちがい．答えはもっと大きいですよ");
-        console.log = function (log) {
-            document.getElementByld('p#result').innerHTML+= iog+"<br>";
+        p.textContent = 'まちがい．答えはもっと大きいですよ';
         }
     } else if (yoso>kotae) {
-        console.log("まちがい．答えはもっと小さいですよ");
+        p.textContent ='まちがい．答えはもっと小さいですよ';
     } else if (yoso==kotae) {
-        console.log("正解です．おめでとう!");
+        p.textContent ='正解です．おめでとう!';
     }
- }
+ 
 }
 if (kaisu>3) {
-  console.log("答えは " + kotae + " でした．すでにゲームは終わっています");
+    p.textContent ='答えは ' + kotae + ' でした．すでにゲームは終わっています';
 
 
 
