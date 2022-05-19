@@ -14,13 +14,18 @@ function hantei() {
     let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
 
  // 課題3-1：ここの判定処理を作成する
- let p2 = document.querySelector('p#result');
+ let pp = document.querySelector('p#result');
+ let pp2 = document.querySelector('p#answer');
  let p;
+ let p2;
  p = document.createElement('p');
- p2.insertAdjacentElement('beforeend',p);
+ p2 = document.createElement('p2');
+ pp2.insertAdjacentElement('afterend',p2);
+ pp.insertAdjacentElement('afterend',p);
+ 
 
  kaisu++;
- p.textContent = kaisu+'回目の予想: '+yoso;
+ p2.textContent = kaisu+'回目の予想: '+yoso;
  if (kaisu<=3) {
     if (yoso<kotae) {
         p.textContent = 'まちがい．答えはもっと大きいですよ';
