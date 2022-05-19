@@ -15,8 +15,7 @@ function hantei() {
 
  // 課題3-1：ここの判定処理を作成する
  let p = document.querySelector('p#result');
- p.insertAdjacentElement('afterend', p);
- p.textContent(yoso);
+
  kaisu++;
  console.log(kaisu+"回目の予想: "+yoso);
  if (kaisu<=3) {
