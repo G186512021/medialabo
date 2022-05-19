@@ -24,7 +24,7 @@ let oceans = [
   
   for (let o of oceans) {
     li = document.createElement('li');
-    li.textcontest = o;
+    li.textContest = o;
     ul.insertAdjacentElement('beforeend', li);
     console.log(o);
   }
