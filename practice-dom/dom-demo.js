@@ -9,7 +9,7 @@ li = document.createElement('li');
 li.textContent = 'ヨーロッパ大陸';
 ul.insertAdjacentElement('beforeend', li);
 
-let h2sevenOcean = document.querySelector('h2');
+let h2savenOcean = document.querySelector('h2');
 let oceans = [
     '北極海',
     '北大西洋',
@@ -20,7 +20,7 @@ let oceans = [
     '南極海'
   ]
   ul = document.createElement('ul');
-  h2sevenOcean.insertAdjacentElement('afterend', ul);
+  h2savenOcean.insertAdjacentElement('afterend', ul);
   
   for (let o of oceans) {
     li = document.createElement('li');
