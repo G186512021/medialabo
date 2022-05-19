@@ -32,7 +32,7 @@ if (kaisu>3) {
 
  let p = document.querySelector('p#result');
  p.insertAdjacentElement('afterend', p);
- p.textContent(p);
+ p.textContent(yoso);
  
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
