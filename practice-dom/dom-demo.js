@@ -20,9 +20,14 @@ let oceans = [
     '南極海'
   ]
   ul = document.createElement('ul');
-
-    h2sevenOcean.insertAdjacentElement('afterend', ul);
+  h2sevenOcean.insertAdjacentElement('afterend', ul);
   
+  for(let o of ocean) {
+    li = document.createElement('li');
+    li.textcontest = o;
+    ul.insertAdjacentElement('beforeend', li);
+    console.log(o);
+  }
 
   let h2s = document.querySelectorAll('h2');
   for (let h2 of h2s ) {
