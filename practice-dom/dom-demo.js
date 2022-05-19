@@ -27,5 +27,5 @@ let oceans = [
 
   let h2s = document.querySelectorAll('h2');
   for (let h2 of h2s ) {
-    h2s.style.color = 'palegreen';
+    h2.style.color = 'palegreen';
   }
