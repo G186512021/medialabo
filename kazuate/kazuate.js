@@ -14,6 +14,9 @@ function hantei() {
     let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
 
  // 課題3-1：ここの判定処理を作成する
+ let p = document.querySelector('p#result');
+ p.insertAdjacentElement('afterend', p);
+ p.textContent(yoso);
  kaisu++;
  console.log(kaisu+"回目の予想: "+yoso);
  if (kaisu<=3) {
@@ -30,9 +33,7 @@ if (kaisu>3) {
   console.log("答えは " + kotae + " でした．すでにゲームは終わっています");
 
 
- let p = document.querySelector('p#result');
- p.insertAdjacentElement('afterend', p);
- p.textContent(yoso);
+
  
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
