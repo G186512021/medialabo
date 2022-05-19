@@ -29,13 +29,11 @@ function hantei() {
  if (kaisu<=3) {
     if (yoso<kotae) {
         p.textContent = 'まちがい．答えはもっと大きいですよ';
-        }
     } else if (yoso>kotae) {
         p.textContent ='まちがい．答えはもっと小さいですよ';
-    } else if (yoso==kotae) {
+    } else if (yoso===kotae) {
         p.textContent ='正解です．おめでとう!';
     }
- 
 }
 if (kaisu>3) {
     p.textContent ='答えは ' + kotae + ' でした．すでにゲームは終わっています';
@@ -46,4 +44,5 @@ if (kaisu>3) {
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
 
+}
 }
