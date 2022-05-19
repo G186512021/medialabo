@@ -23,3 +23,9 @@ let oceans = [
   for (let o of oceans) {
       ul.insertAdjacentElement('afterend',h2sevenOcean)
   }
+
+
+  let h2s = document.querySelectorAll('h2');
+  for (let h2 of h2s ) {
+    h1.style.color = 'palegreen';
+  }
