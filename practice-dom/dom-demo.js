@@ -9,7 +9,7 @@ li = document.createElement('li');
 li.textContent = 'ヨーロッパ大陸';
 ul.insertAdjacentElement('beforeend', li);
 
-let h2sevenOcean = document.querySelector('h2#savenOcean');
+let h2sevenOcean = document.querySelector('h2#sevenOcean');
 let oceans = [
     '北極海',
     '北大西洋',
