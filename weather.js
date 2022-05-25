@@ -62,9 +62,10 @@ function mintemp() {
 
 //第四回課題
 let inf = document.querySelector('div#placeholder')
-let p;
-p = document.createElement('p');
-inf.insertAdjacentElement('afterend',p);
-p.textContent = data.name;
-p.textContent = data.main.temp_max;
-p.textContent = data.main.temp_min;
+let hyozi;
+hyozi = document.createElement('hyozi');
+inf.insertAdjacentElement('afterend',hyozi);
+zyozi.textContent = [data.name,
+  data.main.temp_max,
+  data.main.temp_min,
+]
