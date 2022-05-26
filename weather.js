@@ -69,3 +69,12 @@ p.textContent = [data.name,
   data.main.temp_max,
   data.main.temp_min,
 ]
+
+//第五回課題
+let b = document.querySelector('#print');
+b.addEventListener('click', greeting);
+
+function greeting() {
+	let i = document.querySelector('input[name="shimei"]');
+	let search = i.value;
+}
