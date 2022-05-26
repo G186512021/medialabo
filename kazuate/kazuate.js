@@ -15,6 +15,7 @@ bu.addEventListener('click',hantei);
 function hantei() {
  // 第5回課題:テキストボックスの数値をここに代入
  let yoso = document.querySelector('input[name="math"]');
+ let math = yoso.value;
  parseInt(yoso);
 
  // 課題3-1：ここの判定処理を作成する
