@@ -27,6 +27,10 @@ function hantei() {
  p2 = document.createElement('p2');
  pp2.insertAdjacentElement('beforeend',p2);
  pp.insertAdjacentElement('afterend',p);
+
+ if (kaisu == 0) {
+    kaisu++;
+    }
  
  if (kaisu<=3 && kaisu != 0) {
     p2.textContent = kaisu+'回目の予想: '+math+' ';
@@ -40,11 +44,8 @@ function hantei() {
     }
 }
 
-if (kaisu == 0) {
-    kaisu++;
-    }
 
-if (kaisu>4) {
+if (kaisu>3) {
     p.textContent ='答えは ' + kotae + ' でした．すでにゲームは終わっています';
 
 
