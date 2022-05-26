@@ -36,7 +36,7 @@ function hantei() {
         p.textContent = 'まちがい．答えはもっと大きいですよ';
     } else if (math>kotae) {
         p.textContent ='まちがい．答えはもっと小さいですよ';
-    } else if (math===kotae) {
+    } else if (math==kotae) {
         p.textContent ='正解です．おめでとう!';
     }
 }
