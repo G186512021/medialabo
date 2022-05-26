@@ -28,7 +28,7 @@ function hantei() {
  pp2.insertAdjacentElement('beforeend',p2);
  pp.insertAdjacentElement('afterend',p);
  
- if (kaisu<=3) {
+ if (kaisu<=3 && kaisu != 0) {
     p2.textContent = kaisu+'回目の予想: '+math+' ';
     if (math<kotae) {
         p.textContent = 'まちがい．答えはもっと大きいですよ';
