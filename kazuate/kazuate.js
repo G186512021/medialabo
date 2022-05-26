@@ -25,12 +25,12 @@ function hantei() {
  let p2;
  p = document.createElement('p');
  p2 = document.createElement('p2');
- pp2.insertAdjacentElement('afterend',p2);
+ pp2.insertAdjacentElement('afterend',p);
  pp.insertAdjacentElement('afterend',p);
  
 
  kaisu++;
- p2.textContent = kaisu+'回目の予想: '+math+' \n';
+ p2.textContent = kaisu+'回目の予想: '+math;
  if (kaisu<=3) {
     if (math<kotae) {
         p.textContent = 'まちがい．答えはもっと大きいですよ';
