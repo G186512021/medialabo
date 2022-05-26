@@ -28,8 +28,10 @@ function hantei() {
  pp2.insertAdjacentElement('beforeend',p2);
  pp.insertAdjacentElement('afterend',p);
  
-
- kaisu++;
+ if (kaisu == 0) {
+ return 1;
+ }
+ 
  p2.textContent = kaisu+'回目の予想: '+math+' ';
  if (kaisu<=3) {
     if (math<kotae) {
@@ -39,6 +41,7 @@ function hantei() {
     } else if (math==kotae) {
         p.textContent ='正解です．おめでとう!';
     }
+    kaisu++;
 }
 if (kaisu>3) {
     p.textContent ='答えは ' + kotae + ' でした．すでにゲームは終わっています';
