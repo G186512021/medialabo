@@ -75,6 +75,6 @@ let b = document.querySelector('#print');
 b.addEventListener('click', greeting);
 
 function greeting() {
-	let i = document.querySelector('input[name="shimei"]');
-	let search = i.value;
+	let i = document.querySelector('input[name="se"]');
+	let se = i.value;
 }
