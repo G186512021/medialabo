@@ -30,7 +30,7 @@ function hantei() {
  
 
  kaisu++;
- p2.textContent = kaisu+'回目の予想: '+math;
+ p2.textContent = kaisu+'回目の予想: '+math+' \n';
  if (kaisu<=3) {
     if (math<kotae) {
         p.textContent = 'まちがい．答えはもっと大きいですよ';
