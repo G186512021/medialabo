@@ -32,9 +32,9 @@ function hantei() {
     kaisu++;
     }
  
- if (kaisu<=3 && kaisu != 0) {
-    p2.textContent = kaisu+'回目の予想: '+math+' ';
     kaisu++;
+ if (kaisu<=4 && kaisu != 1) {
+    p2.textContent = kaisu+'回目の予想: '+math+' ';
     if (math<kotae) {
         p.textContent = 'まちがい．答えはもっと大きいですよ';
     } else if (math>kotae) {
@@ -45,7 +45,7 @@ function hantei() {
 }
 
 
-if (kaisu>3) {
+if (kaisu>4) {
     p.textContent ='答えは ' + kotae + ' でした．すでにゲームは終わっています';
 
 
