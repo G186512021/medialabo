@@ -8,7 +8,7 @@ let kaisu = 0;
 // 予想を4回実行する
 // 将来: ボタンを押したら， hantei() を呼び出すように修正する
 hantei();
-let bu = document.quarySelector('button#print');
+let bu = document.querySelector('#print');
 bu.addEventListener('click',hantei);
 
 // ボタンを押した後の処理をする関数 hantei() の定義
