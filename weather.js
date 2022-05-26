@@ -59,3 +59,13 @@ function maxtemp() {
 function mintemp() {
  console.log(data.main.temp_min);
 }
+
+//第四回課題
+let inf = document.querySelector('div#placeholder')
+let p;
+p = document.createElement('p');
+inf.insertAdjacentElement('afterend',p);
+p.textContent = [data.name,
+  data.main.temp_max,
+  data.main.temp_min,
+]
