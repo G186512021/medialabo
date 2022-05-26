@@ -25,7 +25,7 @@ function hantei() {
  let p2;
  p = document.createElement('p');
  p2 = document.createElement('p2');
- pp2.insertAdjacentElement('afterend',p);
+ pp2.insertAdjacentElement('afterend',p2);
  pp.insertAdjacentElement('afterend',p);
  
 
