@@ -72,9 +72,9 @@ p.textContent = [data.name,
 
 //第五回課題
 let b = document.querySelector('#print');
-b.addEventListener('click', greeting);
+b.addEventListener('click', searchwindow);
 
-function greeting() {
+function searchwindow() {
 	let i = document.querySelector('input[name="se"]');
 	let se = i.value;
 }
