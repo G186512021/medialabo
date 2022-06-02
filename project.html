@@ -1,56 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>カイロはあったカイロ</title>
-
-      <!-- 第四、五回課題
-    <script src="weather.js" defer></script>
-    -->
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
-    <script src="project.js"></script>
-
+    <title>Ajax通信のデモ</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+	<script src="project.js" defer></script>
   </head>
 
   <body>
-    <header>
-      <h1> カイロはあったカイロ </h1>
-    </header>
-
-    <!-- 第四、五回課題
-   <div id="placeholder"></div>
-   <label for="se">検索: </label>
-	<input type="search" name="se" size="10">
-	<button id="print">🔍</button>
-    -->
-
-  <!-- 検索欄 -->
-  <button id="sendRequest">検索</button>
-
+    <h1>Ajax通信のデモ</h1>
+	<p>以下のボタンを押すと，サーバに通信します．結果はコンソールに出力します．</p>
+	<button id="sendRequest">通信</button>
   </body>
 </html>
-
-<style>
-html {
-  font-size: 10px;
-}
-
-body {
-  background-color: antiquewhite;
-}
-
-h1 {
-  font-size: 3em;
-  color: rgb(96, 0, 0);
-  text-align: left;
-  
-
-}
-
-header, footer {
-  background-color: rgb(255, 166, 0);
-  height: 5em;
-  padding: 2em;
-}
-</style>
