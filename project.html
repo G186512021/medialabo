@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>カイロはあったカイロ</title>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="weather.js" defer></script>
   </head>
 
@@ -13,10 +14,14 @@
     </header>
    <p>カイロの温度</p>
    <div id="placeholder"></div>
+   <!-- 検索欄 -->
    <label for="se">検索: </label>
 	<input type="search" name="se" size="10">
 	<button id="print">🔍</button>
-   
+
+  <!-- 検索欄 -->
+  <button id="sendRequest">🔍</button>
+
   </body>
 </html>
 
@@ -26,9 +31,7 @@ html {
 }
 
 body {
-  background-image:
-  url("https://publicdomainq.net/images/201807/06s/publicdomainq-0023888amr.jpg");
-  background-size:cover;
+  background-color: antiquewhite;
 }
 
 h1 {

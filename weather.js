@@ -78,3 +78,33 @@ function searchwindow() {
 	let i = document.querySelector('input[name="se"]');
 	let se = i.value;
 }
+
+// 第六回課題
+  let aj = document.querySelector('#sendRequest');
+  aj.addEventListener('click', sendRequest);
+
+  // 通信開始処理
+  function sendRequest() {
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/360630.json';
+
+    //通信開始
+    axios.get(url)
+     .then(showResult)
+     .catch(showError)
+     .then(finish);
+  }
+
+  //成功処理
+  function showResult(resp) {
+
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'String') {
+      data = JSON.parse(data);
+    }
+  }
+
+  // dataを出力
+  p.textContent = [data]
