@@ -16,6 +16,12 @@ function sendRequest() {
 
         let fo = document.querySelector('input[name="kensaku"]');
     let kensaku = fo.value;
+    
+    if (kensaku == 'coord.lon') {
+        p = document.createElement('p');
+        p.insertAdjacentElement('afterend',p);
+        p.textContent = data;
+    }
 }
 
 // 通信が成功した時の処理
@@ -27,12 +33,6 @@ function showResult(resp) {
 	if (typeof data === 'string') {
 		data = JSON.parse(data);
 	}
-
-    if (kensaku === 'coord.lon') {
-        p = document.createElement('p');
-        p.insertAdjacentElement('afterend',p);
-        p.textContent = data;
-    }
 
 	// data をコンソールに出力
 	console.log(data);
