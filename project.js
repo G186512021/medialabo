@@ -31,7 +31,7 @@ function showResult(resp) {
     if (kensaku == 'coord.lon') {
         p = document.createElement('p');
         p.insertAdjacentElement('afterend',p);
-        p.textContent(data);
+        p.textContent = data;
     }
 
 	// data をコンソールに出力
