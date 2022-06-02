@@ -30,7 +30,7 @@ function showResult(resp) {
 
     if (kensaku == 'coord.lon') {
         p = document.createElement('p');
-        data.insertAdjacentElement('afterend',p);
+        p.insertAdjacentElement('afterend',p);
         p.textContent(data);
     }
 
