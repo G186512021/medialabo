@@ -5,7 +5,9 @@ aj.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
-	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/360630.json';
+    let k = document.querySelector('Kairo');
+    Kairo = k.value;
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
 
 	// 通信開始
 	axios.get(url)
