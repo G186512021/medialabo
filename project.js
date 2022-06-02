@@ -28,7 +28,7 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-    if (kensaku == 'coord.lon') {
+    if (kensaku === 'coord.lon') {
         p = document.createElement('p');
         p.insertAdjacentElement('afterend',p);
         p.textContent = data;
