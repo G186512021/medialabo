@@ -29,10 +29,8 @@ function showResult(resp) {
 	}
 
     if (kensaku == 'coord.lon') {
-        let inf = document.querySelector('div#placeholder')
-        let p;
         p = document.createElement('p');
-        inf.insertAdjacentElement('afterend',p);
+        data.insertAdjacentElement('afterend',p);
         p.textContent(data);
     }
 
