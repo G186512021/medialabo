@@ -108,3 +108,12 @@ function searchwindow() {
 
   // dataを出力
   p.textContent = [data]
+  // 通信エラーが発生した時の処理
+function showError(err) {
+  console.log(err);
+}
+
+// 通信の最後にいつも実行する処理
+function finish() {
+  console.log('Ajax 通信が終わりました');
+}
