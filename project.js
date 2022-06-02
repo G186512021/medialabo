@@ -5,7 +5,6 @@ aj.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
-    let k = document.querySelector('Kairo');
     Kairo = '360630';
     let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
 
@@ -14,6 +13,9 @@ function sendRequest() {
 		.then(showResult)
 		.catch(showError)
 		.then(finish);
+
+        let fo = document.querySelector('input[name="kensaku"]');
+    let kensaku = fo.value;
 }
 
 // 通信が成功した時の処理
@@ -25,6 +27,10 @@ function showResult(resp) {
 	if (typeof data === 'string') {
 		data = JSON.parse(data);
 	}
+
+    if (kensaku == 'coord.lon') {
+        p.textContent(data);
+    }
 
 	// data をコンソールに出力
 	console.log(data);
@@ -42,3 +48,5 @@ function showError(err) {
 function finish() {
 	console.log('Ajax 通信が終わりました');
 }
+
+
