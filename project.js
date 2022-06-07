@@ -47,13 +47,11 @@ let se = document.querySelector('#search');
 se.addEventListener('click', search);
 
 function search() {
-
-	let fo = document.querySelector('input[name="kensaku"]');
-	let kensaku = fo.value;
-	if (kensaku == 'coord.lon') {
-		p = document.createElement('p');
-		p.insertAdjacentElement('afterend',p);
-		p.textContent = data;
+	let a = doucument.querySelectorAll('input[name="kensaku"]');
+	for (let b of a) {
+		if (b.checked) {
+			p.textcontent(c.value);
+		}
 	}
 }
 

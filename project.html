@@ -25,11 +25,29 @@
       -->
   
     <!-- 検索欄 -->
-    <input type="text" name="kensaku" id="kensaku" size="10">
-	<button id="search">検索</button>
-    <p>おっす</p>
+    <p id = sendRequest>カイロのどの情報を知りたいですか？</p>
+    <p>
+      <input type="checkbox" name="kensaku" id="lon" value="lon">
+      <label for="lon">緯度</label>
+      <input type="checkbox" name="kensaku" id="lat" value="lat">
+      <label for="lat">経度</label>
+      <input type="checkbox" name="kensaku" id="weather" value="weather">
+      <label for="weather">天気</label>
+      <input type="checkbox" name="kensaku" id="temp_min" value="temp_min">
+      <label for="temp_min">最低気温</label>
+      <input type="checkbox" name="kensaku" id="temp_max" value="temp_max">
+      <label for="temp_max">最高気温</label>
+      <input type="checkbox" name="kensaku" id="humidity" value="humidity">
+      <label for="humidity">湿度</label>
+      <input type="checkbox" name="kensaku" id="speed" value="speed">
+      <label for="speed">風速</label>
+      <input type="checkbox" name="kensaku" id="deg" value="deg">
+      <label for="deg">風向</label>
+      <input type="checkbox" name="kensaku" id="name" value="name">
+      <label for="name">都市名</label>
+    <p> 
+    <p><button  id = "search">検索</button></p>
 
-    <p id = sendRequest>a</p>
   </body>
 </html>
 
