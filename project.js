@@ -52,14 +52,15 @@ function search() {
 	for (let b of a) {
 		if (b.checked) {
 			p.textContent = [
-				data.coord.lon,
-				data.coord.lat,
-				data.weather.description,
-				data.main.temp_min,
-				data.main.temp_max,
-				data.main.humidity,
-				data.wind.speed,
-				data.wind.deg,
+				coord.lon,
+				coord.lat,
+				weather.description,
+				main.temp_min,
+				main.temp_max,
+				main.humidity,
+				wind.speed,
+				wind.deg,
+				name,
 			]
 		}
 	}
