@@ -80,10 +80,6 @@ function namecairo() {
    function lat () {
 	   console.log(data.coord.lat);
    }
-   function lon () {
-	   console.log(data.coord.lon);
-   }
-
 let p;
 p = document.createElement('p');
 
@@ -92,7 +88,7 @@ function search() {
 	for (let b of a) {
 		if (b.checked) {
 			p.textContent = [
-				data.coord.lon,
+				
 				data.coord.lat,
 				data.weather.description,
 				data.main.temp_min,
