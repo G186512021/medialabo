@@ -48,10 +48,18 @@ se.addEventListener('click', search);
 let p;
 p = document.createElement('p');
 
+
 function search() {
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	for (let b of a) {
 		if (b.checked) {
+			console.log(b.value);
+
+		}
+	}
+}
+
+/*
 			p.textContent = [
 				data.coord.lon,
 				data.coord.lat,
@@ -63,8 +71,5 @@ function search() {
 				data.wind.deg,
 				data.name,
 			]
-		}
-	}
-}
-
+			*/
 
