@@ -45,41 +45,6 @@ function finish() {
 let se = document.querySelector('#search');
 se.addEventListener('click', search);
 
-
-
-lat();
-weather();
-mintemp();
-maxtemp();
-humid();
-speed();
-deg();
-namecairo();
-
-function namecairo() {
-	console.log(data.name);
-   }
-   function maxtemp() {
-	console.log(data.main.temp_max);
-   }
-   function mintemp() {
-	console.log(data.main.temp_min);
-   }
-   function deg() {
-	   console.log(data.wind.deg);
-   }
-   function speed() {
-	   console.log(data.wind.speed);
-   }
-   function humid() {
-	   console.log(data.main.humidity);
-   }
-   function weather() {
-	   console.log(data.weather.description);
-   }
-   function lat () {
-	   console.log(data.coord.lat);
-   }
 let p;
 p = document.createElement('p');
 
@@ -88,7 +53,7 @@ function search() {
 	for (let b of a) {
 		if (b.checked) {
 			p.textContent = [
-				
+				data.coord.lon,
 				data.coord.lat,
 				data.weather.description,
 				data.main.temp_min,
