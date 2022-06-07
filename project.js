@@ -56,6 +56,34 @@ speed();
 deg();
 namecairo();
 
+function namecairo() {
+	console.log(data.name);
+   }
+   function maxtemp() {
+	console.log(data.main.temp_max);
+   }
+   function mintemp() {
+	console.log(data.main.temp_min);
+   }
+   function deg() {
+	   console.log(data.wind.deg);
+   }
+   function speed() {
+	   console.log(data.wind.speed);
+   }
+   function humid() {
+	   console.log(data.main.humidity);
+   }
+   function weather() {
+	   console.log(data.weather.description);
+   }
+   function lat () {
+	   console.log(data.coord.lat);
+   }
+   function lon () {
+	   console.log(data.coord.lon);
+   }
+
 let p;
 p = document.createElement('p');
 
