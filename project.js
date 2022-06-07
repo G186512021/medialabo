@@ -60,7 +60,6 @@ function search() {
 				data.main.humidity,
 				data.wind.speed,
 				data.wind.deg,
-				data.name,
 			]
 		}
 	}
