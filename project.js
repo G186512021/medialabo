@@ -45,6 +45,17 @@ function finish() {
 let se = document.querySelector('#search');
 se.addEventListener('click', search);
 
+
+lon();
+lat();
+weather();
+mintemp();
+maxtemp();
+humid();
+speed();
+deg();
+namecairo();
+
 let p;
 p = document.createElement('p');
 
