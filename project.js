@@ -49,7 +49,7 @@ function search() {
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	for (let b of a) {
 		if (b.checked) {
-			console.log(c.value);
+			p.textcontent(c.value);
 		}
 	}
 }
