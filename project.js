@@ -43,7 +43,7 @@ function finish() {
 	console.log('Ajax 通信が終わりました');
 }
 
-function sendRequest {
+function sendRequest() {
 
 	let fo = document.querySelector('input[name="kensaku"]');
 	let kensaku = fo.value;
