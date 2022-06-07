@@ -1,5 +1,5 @@
 let aj = document.querySelector('#sendRequest');
-aj.addEventListener('click', sendRequest);
+aj.addEventListener('onLoad', sendRequest);
 
 
 // 通信を開始する処理
@@ -43,10 +43,10 @@ function finish() {
 	console.log('Ajax 通信が終わりました');
 }
 
-let se = document.querySelector('#sendRequest');
-se.addEventListener('click', sendRequest);
+let se = document.querySelector('#search');
+se.addEventListener('click', search);
 
-function sendRequest() {
+function search() {
 
 	let fo = document.querySelector('input[name="kensaku"]');
 	let kensaku = fo.value;
