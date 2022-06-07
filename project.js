@@ -45,11 +45,32 @@ function finish() {
 let se = document.querySelector('#search');
 se.addEventListener('click', search);
 
+lon();
+lat();
+weather();
+mintemp();
+maxtemp();
+humid();
+speed();
+deg();
+namecairo();
+let p = document.createElement('p');
+
 function search() {
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	for (let b of a) {
 		if (b.checked) {
-			//この部分の処理がわかりません。
+			p.textContent = [
+				data.coord.lon,
+				data.coord.lat,
+				data.weather.description,
+				data.main.temp_min,
+				data.main.temp_max,
+				data.main.humidity,
+				data.wind.speed,
+				data.wind.deg,
+				data.name,
+			]
 		}
 	}
 }
