@@ -46,7 +46,7 @@ let se = document.querySelector('#search');
 se.addEventListener('click', search);
 
 
-lon();
+
 lat();
 weather();
 mintemp();
