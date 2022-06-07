@@ -50,7 +50,7 @@ function search() {
 	let a = doucument.querySelectorAll('input[name="kensaku"]');
 	for (let b of a) {
 		if (b.checked) {
-			p.textcontent(c.value);
+			console.log(c.value);
 		}
 	}
 }
