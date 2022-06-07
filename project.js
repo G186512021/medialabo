@@ -1,9 +1,6 @@
 let aj = document.querySelector('#sendRequest');
 aj.addEventListener('onLoad', sendRequest);
 
-let se = document.querySelector('#search');
-se.addEventListener('click', search);
-
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
@@ -45,8 +42,11 @@ function finish() {
 	console.log('Ajax 通信が終わりました');
 }
 
+let se = document.querySelector('#search');
+se.addEventListener('click', search);
+
 function search() {
-	let a = doucument.querySelectorAll('input[name="kensaku"]');
+	let a = document.querySelectorAll('input[name="kensaku"]');
 	for (let b of a) {
 		if (b.checked) {
 			console.log(c.value);
