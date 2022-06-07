@@ -1,4 +1,5 @@
 let aj = document.querySelector('#sendRequest');
+aj.addEventListener('click', sendRequest);
 
 
 // 通信を開始する処理
@@ -40,6 +41,20 @@ function showError(err) {
 // 通信の最後にいつも実行する処理
 function finish() {
 	console.log('Ajax 通信が終わりました');
+}
+
+let se = document.querySelector('#sendRequest');
+se.addEventListener('click', sendRequest);
+
+function sendRequest() {
+
+	let fo = document.querySelector('input[name="kensaku"]');
+	let kensaku = fo.value;
+	if (kensaku == 'coord.lon') {
+		p = document.createElement('p');
+		p.insertAdjacentElement('afterend',p);
+		p.textContent = data;
+	}
 }
 
 
