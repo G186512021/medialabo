@@ -33,7 +33,7 @@ function showResult(resp) {
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 	for (let b of a) {
-		if (input[value = "lon"] === true) {
+		if (input[value = "lon"] == true) {
 			p.textContent = [
 				data.coord.lon,
 			]
