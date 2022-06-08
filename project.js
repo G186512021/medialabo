@@ -36,7 +36,6 @@ function showResult(resp) {
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
-				b.value,
 				data.coord.lon,
 				data.coord.lat,
 				data.weather.description,
