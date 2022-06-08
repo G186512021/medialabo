@@ -25,96 +25,11 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-	let p;
-    p = document.createElement('p');
-	let aja = document.querySelector('div#placeholder');
-	aja.insertAdjacentElement('afterend', p);
-
-	function lon() {
-		if (document.getElementByld("lon").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.coord.lon,
-			]
-		}
-	}
-	function lat() {
-		if (document.getElementByld("lat").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.coord.lat,
-			]
-		}
-	}
-	function description() {
-		if (document.getElementByld("description").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.weather.description,
-			]
-		}
-	}
-	function temp_min() {
-		if (document.getElementByld("temp_min").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.main.temp_min,
-			]
-		}
-	}
-	function temp_max() {
-		if (document.getElementByld("temp_max").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.main.temp_max,
-			]
-		}
-	}
-	function humidity() {
-		if (document.getElementByld("humidity").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.main.humidity,
-			]
-		}
-	}
-	function speed() {
-		if (document.getElementByld("speed").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.wind.speed,
-			]
-		}
-	}
-	function deg() {
-		if (document.getElementByld("deg").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.wind.deg,
-			]
-		}
-	}
-	function name() {
-		if (document.getElementByld("name").checked) {
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
-			p.textContent = [
-				data.name,
-			]
-		}
-	}
-/*
-    let p;
-    p = document.createElement('p');
-
+	let se = document.querySelector('#search');
+se.addEventListener('click', search);
+let p;
+p = document.createElement('p');
+function search() {
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
@@ -124,7 +39,7 @@ function showResult(resp) {
 			p.textContent = [
 				data.coord.lon,
 				data.coord.lat,
-				data.weather.description,
+				data.weather+'.0'+description,
 				data.main.temp_min,
 				data.main.temp_max,
 				data.main.humidity,
@@ -135,7 +50,25 @@ function showResult(resp) {
 
 		}
 	}
+}
+
+	/*
+	for ( let i = 0; i < document.form1.kensaku.length; i++) {
+		let p;
+		p = document.createElement('p');
+	
+		let a = document.querySelectorAll('input[name="kensaku"]');
+		let aja = document.querySelector('div#placeholder');
+		aja.insertAdjacentElement('afterend', p);
+		if (document.form1.kensaku[i].checked) {
+			flag = true;
+			p.textContent = [
+				data+document.form1.value[i],
+			]
+		}
+	}
 	*/
+	
 	// data をコンソールに出力
 	console.log(data);
 
