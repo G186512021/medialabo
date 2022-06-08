@@ -25,6 +25,75 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
+	let p;
+    p = document.createElement('p');
+	let aja = document.querySelector('div#placeholder');
+	aja.insertAdjacentElement('afterend', p);
+
+	function lon() {
+		if (document.getElementByld("lon").checked) {
+			p.textContent = [
+				data.coord.lon,
+			]
+		}
+	}
+	function lat() {
+		if (document.getElementByld("lat").checked) {
+			p.textContent = [
+				data.coord.lat,
+			]
+		}
+	}
+	function description() {
+		if (document.getElementByld("description").checked) {
+			p.textContent = [
+				data.weather.description,
+			]
+		}
+	}
+	function temp_min() {
+		if (document.getElementByld("temp_min").checked) {
+			p.textContent = [
+				data.main.temp_min,
+			]
+		}
+	}
+	function temp_max() {
+		if (document.getElementByld("temp_max").checked) {
+			p.textContent = [
+				data.main.temp_max,
+			]
+		}
+	}
+	function humidity() {
+		if (document.getElementByld("humidity").checked) {
+			p.textContent = [
+				data.main.humidity,
+			]
+		}
+	}
+	function speed() {
+		if (document.getElementByld("speed").checked) {
+			p.textContent = [
+				data.wind.speed,
+			]
+		}
+	}
+	function deg() {
+		if (document.getElementByld("deg").checked) {
+			p.textContent = [
+				data.wind.deg,
+			]
+		}
+	}
+	function name() {
+		if (document.getElementByld("name").checked) {
+			p.textContent = [
+				data.name,
+			]
+		}
+	}
+/*
     let p;
     p = document.createElement('p');
 
@@ -32,21 +101,9 @@ function showResult(resp) {
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 	for (let b of a) {
-		if (lon.checked) {
-			p.textContent = [
-				data.coord.lon,
-			]
-		}	
-		if (lat.checked) {
-			p.textContent = [
-				data.coord.lat,
-			]
-		}
-			/*
+		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
-			data.coord.lon,
-				
 				data.coord.lon,
 				data.coord.lat,
 				data.weather.description,
@@ -57,10 +114,10 @@ function showResult(resp) {
 				data.wind.deg,
 				data.name,
 			]
-			*/
 
-		
+		}
 	}
+	*/
 	// data をコンソールに出力
 	console.log(data);
 
