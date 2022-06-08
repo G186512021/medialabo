@@ -25,11 +25,10 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-	let se = document.querySelector('#search');
-se.addEventListener('click', search);
-let p;
-p = document.createElement('p');
-function search() {
+
+    let p;
+    p = document.createElement('p');
+
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
@@ -50,24 +49,6 @@ function search() {
 
 		}
 	}
-}
-
-	/*
-	for ( let i = 0; i < document.form1.kensaku.length; i++) {
-		let p;
-		p = document.createElement('p');
-	
-		let a = document.querySelectorAll('input[name="kensaku"]');
-		let aja = document.querySelector('div#placeholder');
-		aja.insertAdjacentElement('afterend', p);
-		if (document.form1.kensaku[i].checked) {
-			flag = true;
-			p.textContent = [
-				data+document.form1.value[i],
-			]
-		}
-	}
-	*/
 	
 	// data をコンソールに出力
 	console.log(data);
