@@ -55,7 +55,7 @@ function search() {
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
-				data.coord.lon,
+				'data.'+b.value,
 			]
 			let aja = document.querySelector('div#placeholder');
 			aja.insertAdjacentElement('afterend', p);
