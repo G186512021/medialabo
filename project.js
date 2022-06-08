@@ -32,6 +32,8 @@ function showResult(resp) {
 
 	function lon() {
 		if (document.getElementByld("lon").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.coord.lon,
 			]
@@ -39,6 +41,8 @@ function showResult(resp) {
 	}
 	function lat() {
 		if (document.getElementByld("lat").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.coord.lat,
 			]
@@ -46,6 +50,8 @@ function showResult(resp) {
 	}
 	function description() {
 		if (document.getElementByld("description").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.weather.description,
 			]
@@ -53,6 +59,8 @@ function showResult(resp) {
 	}
 	function temp_min() {
 		if (document.getElementByld("temp_min").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.main.temp_min,
 			]
@@ -60,6 +68,8 @@ function showResult(resp) {
 	}
 	function temp_max() {
 		if (document.getElementByld("temp_max").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.main.temp_max,
 			]
@@ -67,6 +77,8 @@ function showResult(resp) {
 	}
 	function humidity() {
 		if (document.getElementByld("humidity").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.main.humidity,
 			]
@@ -74,6 +86,8 @@ function showResult(resp) {
 	}
 	function speed() {
 		if (document.getElementByld("speed").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.wind.speed,
 			]
@@ -81,6 +95,8 @@ function showResult(resp) {
 	}
 	function deg() {
 		if (document.getElementByld("deg").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.wind.deg,
 			]
@@ -88,6 +104,8 @@ function showResult(resp) {
 	}
 	function name() {
 		if (document.getElementByld("name").checked) {
+			let aja = document.querySelector('div#placeholder');
+			aja.insertAdjacentElement('afterend', p);
 			p.textContent = [
 				data.name,
 			]

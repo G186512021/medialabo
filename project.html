@@ -27,23 +27,23 @@
     <!-- 検索欄 -->
     <p>カイロのどの情報を知りたいですか？</p>
     <p>
-      <input type="checkbox" name="kensaku" id="lon" value="lon">
+      <input type="checkbox" name="kensaku" id="lon" value="lon" onchange="lon();">
       <label for="lon">緯度</label>
-      <input type="checkbox" name="kensaku" id="lat" value="lat">
+      <input type="checkbox" name="kensaku" id="lat" value="lat" onchange="lat();">
       <label for="lat">経度</label>
-      <input type="checkbox" name="kensaku" id="weather" value="description">
+      <input type="checkbox" name="kensaku" id="weather" value="description" onchange="description();">
       <label for="weather">天気</label>
-      <input type="checkbox" name="kensaku" id="temp_min" value="temp_min">
+      <input type="checkbox" name="kensaku" id="temp_min" value="temp_min" onchange="temp_min();">
       <label for="temp_min">最低気温</label>
-      <input type="checkbox" name="kensaku" id="temp_max" value="temp_max">
+      <input type="checkbox" name="kensaku" id="temp_max" value="temp_max" onchange="temp_max();">
       <label for="temp_max">最高気温</label>
-      <input type="checkbox" name="kensaku" id="humidity" value="humidity">
+      <input type="checkbox" name="kensaku" id="humidity" value="humidity" onchange="humidity();">
       <label for="humidity">湿度</label>
-      <input type="checkbox" name="kensaku" id="speed" value="speed">
+      <input type="checkbox" name="kensaku" id="speed" value="speed" onchange="speed();">
       <label for="speed">風速</label>
-      <input type="checkbox" name="kensaku" id="deg" value="deg">
+      <input type="checkbox" name="kensaku" id="deg" value="deg" onchange="deg();">
       <label for="deg">風向</label>
-      <input type="checkbox" name="kensaku" id="name" value="name">
+      <input type="checkbox" name="kensaku" id="name" value="name" onchange="name();">
       <label for="name">都市名</label>
     <p> 
     <p><button  id = "sendRequest">検索</button></p>
