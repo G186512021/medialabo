@@ -21,7 +21,15 @@ function sendRequest() {
 			if (b.checked) {
 				console.log(b.value);
 				p.textContent = [
-					url.name,
+				  url.coord.lon,
+				  url.coord.lat,
+				  url.weather.description,
+				  url.main.temp_min,
+				  url.main.temp_max,
+				  url.main.humidity,
+				  url.wind.speed,
+			 	  url.wind.deg,
+				  url.name,
 				]
 	
 			}
