@@ -51,14 +51,14 @@ p = document.createElement('p');
 
 function search() {
 	let a = document.querySelectorAll('input[name="kensaku"]');
+	let aja = document.querySelector('div#placeholder');
+	aja.insertAdjacentElement('afterend', p);
 	for (let b of a) {
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
 				'data.'+b.value,
 			]
-			let aja = document.querySelector('div#placeholder');
-			aja.insertAdjacentElement('afterend', p);
 
 		}
 	}
