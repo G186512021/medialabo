@@ -5,6 +5,7 @@ aj.addEventListener('click', sendRequest);
 function sendRequest() {
 	// URL を設定
     Kairo = '360630';
+	let data;
     let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
 
 	// 通信開始
@@ -22,7 +23,7 @@ function sendRequest() {
 			if (b.checked) {
 				console.log(url+'.'+b.value);
 				p.textContent = [
-				  b.value,
+				  data.b.value,
 				]
 	
 			}
