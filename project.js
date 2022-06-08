@@ -1,11 +1,10 @@
 let aj = document.querySelector('#sendRequest');
-aj.addEventListener('click', sendRequest);
+aj.addEventListener('onLoad', sendRequest);
 
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
     Kairo = '360630';
-	let data;
     let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
 
 	// 通信開始
@@ -13,21 +12,6 @@ function sendRequest() {
 		.then(showResult)
 		.catch(showError)
 		.then(finish);
-
-		let a = document.querySelectorAll('input[name="kensaku"]');
-		let aja = document.querySelector('div#placeholder');
-		let p;
-        p = document.createElement('p');
-		aja.insertAdjacentElement('afterend', p);
-		for (let b of a) {
-			if (b.checked) {
-				console.log(url+'.'+b.value);
-				p.textContent = [
-				  url.b.value,
-				]
-	
-			}
-		}
 
 }
 
@@ -41,6 +25,24 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
+	let se = document.querySelector('#search');
+se.addEventListener('click', search);
+let p;
+p = document.createElement('p');
+function search() {
+	let a = document.querySelectorAll('input[name="kensaku"]');
+	let aja = document.querySelector('div#placeholder');
+	aja.insertAdjacentElement('afterend', p);
+	for (let b of a) {
+		if (b.checked) {
+			console.log(b.value);
+			p.textContent = [
+				data.name,
+			]
+
+		}
+	}
+}
 	// data をコンソールに出力
 	console.log(data);
 
@@ -60,11 +62,8 @@ function finish() {
 /*
 let se = document.querySelector('#search');
 se.addEventListener('click', search);
-
 let p;
 p = document.createElement('p');
-
-
 function search() {
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
