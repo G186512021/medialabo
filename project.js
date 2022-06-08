@@ -2,10 +2,11 @@ let aj = document.querySelector('#sendRequest');
 aj.addEventListener('onLoad', sendRequest);
 
 // 通信を開始する処理
+let url;
 function sendRequest() {
 	// URL を設定
     Kairo = '360630';
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
 
 	// 通信開始
 	axios.get(url)
