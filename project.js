@@ -2,11 +2,10 @@ let aj = document.querySelector('#sendRequest');
 aj.addEventListener('click', sendRequest);
 
 // 通信を開始する処理
-let url;
 function sendRequest() {
 	// URL を設定
     Kairo = '360630';
-    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
 
 	// 通信開始
 	axios.get(url)
@@ -21,7 +20,7 @@ function sendRequest() {
 			if (b.checked) {
 				console.log(b.value);
 				p.textContent = [
-				  coord.lon,
+				  url.coord.lon,
 				]
 	
 			}
@@ -58,11 +57,11 @@ function finish() {
 /*
 let se = document.querySelector('#search');
 se.addEventListener('click', search);
-*/
+
 let p;
 p = document.createElement('p');
 
-/*
+
 function search() {
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
