@@ -25,8 +25,6 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-	let se = document.querySelector('#search');
-    se.addEventListener('click', search);
     let p;
     p = document.createElement('p');
 
