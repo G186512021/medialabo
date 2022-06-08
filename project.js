@@ -1,5 +1,5 @@
 let aj = document.querySelector('#sendRequest');
-aj.addEventListener('onLoad', sendRequest);
+aj.addEventListener('click', sendRequest);
 
 // 通信を開始する処理
 function sendRequest() {
@@ -26,10 +26,10 @@ function showResult(resp) {
 	}
 
 	let se = document.querySelector('#search');
-se.addEventListener('click', search);
-let p;
-p = document.createElement('p');
-function search() {
+    se.addEventListener('click', search);
+    let p;
+    p = document.createElement('p');
+
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
@@ -42,7 +42,6 @@ function search() {
 
 		}
 	}
-}
 	// data をコンソールに出力
 	console.log(data);
 
