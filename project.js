@@ -57,7 +57,7 @@ function search() {
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
-				'data.'+b.value,
+				data.coord.lon,
 			]
 
 		}
@@ -76,5 +76,6 @@ function search() {
 				data.wind.deg,
 				data.name,
 			]
+			'data.'+b.value,
 			*/
 
