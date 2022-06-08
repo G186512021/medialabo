@@ -33,6 +33,12 @@ function showResult(resp) {
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 	for (let b of a) {
+		if (input[value = "lon"] === true) {
+			p.textContent = [
+				data.coord.lon,
+			]
+		}
+		/*
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
@@ -48,6 +54,7 @@ function showResult(resp) {
 			]
 
 		}
+		*/
 	}
 	
 	// data をコンソールに出力
@@ -66,39 +73,5 @@ function showError(err) {
 function finish() {
 	console.log('Ajax 通信が終わりました');
 }
-/*
-let se = document.querySelector('#search');
-se.addEventListener('click', search);
-let p;
-p = document.createElement('p');
-function search() {
-	let a = document.querySelectorAll('input[name="kensaku"]');
-	let aja = document.querySelector('div#placeholder');
-	aja.insertAdjacentElement('afterend', p);
-	for (let b of a) {
-		if (b.checked) {
-			console.log(b.value);
-			p.textContent = [
-				data.name,
-			]
 
-		}
-	}
-}
-*/
-
-/*
-			p.textContent = [
-				data.coord.lon,
-				data.coord.lat,
-				data.weather.description,
-				data.main.temp_min,
-				data.main.temp_max,
-				data.main.humidity,
-				data.wind.speed,
-				data.wind.deg,
-				data.name,
-			]
-			'data.'+b.value,
-			*/
 
