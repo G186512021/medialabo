@@ -20,9 +20,9 @@ function sendRequest() {
 		aja.insertAdjacentElement('afterend', p);
 		for (let b of a) {
 			if (b.checked) {
-				console.log(b.value);
+				console.log(url+'.'+b.value);
 				p.textContent = [
-				  Object.coord.lon,
+				  'url.'+coord.lon,
 				]
 	
 			}
