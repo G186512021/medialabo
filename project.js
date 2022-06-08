@@ -1,5 +1,5 @@
 let aj = document.querySelector('#sendRequest');
-aj.addEventListener('onLoad', sendRequest);
+aj.addEventListener('click', sendRequest);
 
 // 通信を開始する処理
 let url;
@@ -13,6 +13,19 @@ function sendRequest() {
 		.then(showResult)
 		.catch(showError)
 		.then(finish);
+
+		let a = document.querySelectorAll('input[name="kensaku"]');
+		let aja = document.querySelector('div#placeholder');
+		aja.insertAdjacentElement('afterend', p);
+		for (let b of a) {
+			if (b.checked) {
+				console.log(b.value);
+				p.textContent = [
+					data.name,
+				]
+	
+			}
+		}
 
 }
 
@@ -42,14 +55,14 @@ function showError(err) {
 function finish() {
 	console.log('Ajax 通信が終わりました');
 }
-
+/*
 let se = document.querySelector('#search');
 se.addEventListener('click', search);
-
+*/
 let p;
 p = document.createElement('p');
 
-
+/*
 function search() {
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
@@ -64,6 +77,7 @@ function search() {
 		}
 	}
 }
+*/
 
 /*
 			p.textContent = [
