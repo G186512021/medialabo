@@ -22,7 +22,7 @@ function sendRequest() {
 			if (b.checked) {
 				console.log(url+'.'+b.value);
 				p.textContent = [
-				  data+'.'+b.value,
+				  Object+'.'+b.value,
 				]
 	
 			}
