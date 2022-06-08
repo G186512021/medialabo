@@ -35,6 +35,14 @@ function showResult(resp) {
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
+				data.coord.lon,
+				data.coord.lat,
+				data.weather.description,
+				data.main.temp_min,
+				data.main.temp_max,
+				data.main.humidity,
+				data.wind.speed,
+				data.wind.deg,
 				data.name,
 			]
 
