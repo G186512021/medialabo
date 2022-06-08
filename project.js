@@ -15,6 +15,8 @@ function sendRequest() {
 
 		let a = document.querySelectorAll('input[name="kensaku"]');
 		let aja = document.querySelector('div#placeholder');
+		let p;
+p = document.createElement('p');
 		aja.insertAdjacentElement('afterend', p);
 		for (let b of a) {
 			if (b.checked) {
