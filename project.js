@@ -32,9 +32,21 @@ function showResult(resp) {
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 	for (let b of a) {
-		if (b.checked) {
+		if (lon.checked) {
+			p.textContent = [
+				data.coord.lon,
+			]
+		}	
+		if (lat.checked) {
+			p.textContent = [
+				data.coord.lat,
+			]
+		}
+			/*
 			console.log(b.value);
 			p.textContent = [
+			data.coord.lon,
+				
 				data.coord.lon,
 				data.coord.lat,
 				data.weather.description,
@@ -45,8 +57,9 @@ function showResult(resp) {
 				data.wind.deg,
 				data.name,
 			]
+			*/
 
-		}
+		
 	}
 	// data をコンソールに出力
 	console.log(data);
