@@ -21,7 +21,7 @@ function sendRequest() {
 			if (b.checked) {
 				console.log(b.value);
 				p.textContent = [
-					name,
+					url.name,
 				]
 	
 			}
