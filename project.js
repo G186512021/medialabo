@@ -57,7 +57,7 @@ function search() {
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
-				data.coord.lon,
+				url.coord.lon,
 			]
 
 		}
