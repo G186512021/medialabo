@@ -28,7 +28,7 @@ function showResult(resp) {
     let p;
     p = document.createElement('p');
 
-	let a = document.querySelector('input[id="lon"]');
+	let a = document.querySelector('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 
