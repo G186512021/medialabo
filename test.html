@@ -12,6 +12,7 @@
 	<script src="test.js" defer></script>
   </head>
 
+
   <body>
     <header>
         <h1> カイロはあったカイロ </h1>
@@ -26,29 +27,17 @@
   
     <!-- 検索欄 -->
     <p>カイロのどの情報を知りたいですか？</p>
-    <p>
-        <button id="lon">
-      <input type="checkbox" name="kensaku" id="lon" value="data.coord.lon">
-      <label for="lon">緯度</label>
-      <input type="checkbox" name="kensaku" id="lat" value="lat">
-      <label for="lat">経度</label>
-      <input type="checkbox" name="kensaku" id="weather" value="description">
-      <label for="weather">天気</label>
-      <input type="checkbox" name="kensaku" id="temp_min" value="temp_min">
-      <label for="temp_min">最低気温</label>
-      <input type="checkbox" name="kensaku" id="temp_max" value="temp_max">
-      <label for="temp_max">最高気温</label>
-      <input type="checkbox" name="kensaku" id="humidity" value="humidity">
-      <label for="humidity">湿度</label>
-      <input type="checkbox" name="kensaku" id="speed" value="speed">
-      <label for="speed">風速</label>
-      <input type="checkbox" name="kensaku" id="deg" value="deg">
-      <label for="deg">風向</label>
-      <input type="checkbox" name="kensaku" id="name" value="name">
-      <label for="name">都市名</label>
-    <p> 
-    <p><button  id = "sendRequest">検索</button></p>
-    <div id = "placeholder"></div>
+
+    <div class="cell" id="cell1">緯度</div>
+    <div class="cell" id="cell2">経度</div>
+    <div class="cell" id="cell3">天気</div>
+    <div class="cell" id="cell4">最低気温</div>
+    <div class="cell" id="cell5">最高気温</div>
+    <div class="cell" id="cell6">湿度</div>
+    <div class="cell" id="cell7">風速</div>
+    <div class="cell" id="cell8">風向</div>
+    <div class="cell" id="cell9">都市名</div>
+
 
   </body>
 </html>

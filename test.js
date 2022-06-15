@@ -25,24 +25,15 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-    let p;
+	let p;
     p = document.createElement('p');
 
-	let a = document.querySelector('input[name="kensaku"]');
-	let aja = document.querySelector('div#placeholder');
-	aja.insertAdjacentElement('afterend', p);
-
-	for (let b of a) {
-	
-		
-		if (b.checked) {
-			console.log(b.value);
-			p.textContent = [
-				b.value,
-			]
-
-		}
-		
+	let c1 = document.querySelector('#cell1');
+    c1.addEventListener('click', foo1);
+	function foo1() {
+		p.textContent = [
+			data.coord.lon,
+		]
 	}
 	
 	// data をコンソールに出力
