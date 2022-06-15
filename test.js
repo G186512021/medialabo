@@ -27,7 +27,7 @@ function showResult(resp) {
 
 
 
-	let a = document.querySelector('input[name="lon"]');
+	let a = document.querySelector('input[id="lon"]');
 	if (a.checked) {
 		document.getElementById("lon").textContent = data.coord.lon;
 	}
