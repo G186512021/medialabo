@@ -1,4 +1,5 @@
-
+let aj = document.querySelector('#sendRequest');
+aj.addEventListener('click', sendRequest);
 
 // 通信を開始する処理
 function sendRequest() {
@@ -24,17 +25,36 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-	let p;
-    p = document.createElement('p');
 
-	let c1 = document.querySelector('#cell1');
-    c1.addEventListener('click', foo1);
-	function foo1(event) {
-		let div = event.target;
-		p.textContent = [
-			data.coord.lon,
-		]
+
+	let a = document.querySelector('input[name="lon"]');
+	if (a.checked) {
+		document.getElementById("lon").textContent = data.coord.lon;
 	}
+	/*
+	let aja = document.querySelector('div#placeholder');
+	aja.insertAdjacentElement('afterend', p);
+	for (let b of a) {
+	
+		
+		if (b.checked) {
+			console.log(b.value);
+			p.textContent = [
+				data.coord.lon,
+				data.coord.lat,
+				data.weather[0].description,
+				data.main.temp_min,
+				data.main.temp_max,
+				data.main.humidity,
+				data.wind.speed,
+				data.wind.deg,
+				data.name,
+			]
+
+		}
+		
+	}
+	*/
 	
 	// data をコンソールに出力
 	console.log(data);
