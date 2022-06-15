@@ -29,7 +29,8 @@ function showResult(resp) {
 
 	let c1 = document.querySelector('#cell1');
     c1.addEventListener('click', foo1);
-	function foo1() {
+	function foo1(event) {
+		let div = event.target;
 		p.textContent = [
 			data.coord.lon,
 		]
