@@ -29,10 +29,12 @@ function showResult(resp) {
     let p;
     p = document.createElement('p');
 
-	let a1 = document.querySelector('input[name="kensaku1"]');
-	let aja1 = document.querySelector('div#placeholder1');
-	aja1.insertAdjacentElement('afterend', p);
-	for (let b of a1) {
+	let a = document.querySelectorAll('input[name="kensaku"]');
+	let aja = document.querySelector('div#placeholder');
+	aja.insertAdjacentElement('afterend', p);
+	for (let b of a) {
+	
+		
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
@@ -46,18 +48,9 @@ function showResult(resp) {
 				data.wind.deg,
 				data.name,
 			]
+
 		}
-	}
-	let a2 = document.querySelector('input[name="kensaku2"]');
-	let aja2 = document.querySelector('div#placeholder2');
-	aja2.insertAdjacentElement('afterend', p);
-	for (let b of a2) {
-		if (b.checked) {
-			console.log(b.value);
-			p.textContent = [
-				data.coord.lat,
-			]
-		}
+		
 	}
 	
 	// data をコンソールに出力
