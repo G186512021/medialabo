@@ -1,3 +1,5 @@
+let aj = document.querySelector('#sendRequest');
+aj.addEventListener('click', sendRequest);
 
 // 通信を開始する処理
 function sendRequest() {
@@ -23,47 +25,26 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-	window.onload = function () {
-		document.getElementByld("lon").onclick = lonhander;
-		document.getElementByld("lat").onclick = lathander;
-		document.getElementByld("weather").onclick = weatherhander;
-		document.getElementByld("temp_min").onclick = temp_minhander;
-		document.getElementByld("temp_max").onclick = temp_maxhander;
-		document.getElementByld("humidity").onclick = humidityhander;
-		document.getElementByld("speed").onclick = speedhander;
-		document.getElementByld("deg").onclick = deghander;
-		document.getElementByld("name").onclick = namehander;
-	}
 
-	function lonhander(e) {
-		document.getElementById("placehplder").textcontent = data.coord.lon
-	}
-	function lathander(e) {
-		document.getElementById("placehplder").textcontent = data.coord.lat
-	}
-	function weatherhander(e) {
-		document.getElementById("placehplder").textcontent = data.weather[0].description
-	}
-	function temp_minhander(e) {
-		document.getElementById("placehplder").textcontent = data.main.temp_min
-	}
-	function temp_maxhander(e) {
-		document.getElementById("placehplder").textcontent = data.main.temp_max
-	}
-	function humidityhander(e) {
-		document.getElementById("placehplder").textcontent = data.main.humidity
-	}
-	function speedhander(e) {
-		document.getElementById("placehplder").textcontent = data.wind.speed
-	}
-	function deghander(e) {
-		document.getElementById("placehplder").textcontent = data.wind.deg
-	}
-	function namehander(e) {
-		document.getElementById("placehplder").textcontent = data.name
-	}
+    let p;
+    p = document.createElement('p');
 
+	let a = document.querySelectorAll('input[name="kensaku"]');
+	let aja = document.querySelector('div#placeholder');
+	aja.insertAdjacentElement('afterend', p);
+	for (let b of a) {
+	
+		
+		if (b.checked) {
+			console.log(b.value);
+			p.textContent = [
+				c.value,
+			]
 
+		}
+		
+	}
+	
 	// data をコンソールに出力
 	console.log(data);
 
@@ -80,5 +61,4 @@ function showError(err) {
 function finish() {
 	console.log('Ajax 通信が終わりました');
 }
-
 
