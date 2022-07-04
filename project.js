@@ -25,13 +25,15 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
+
+
 	let c1 = document.querySelector('#cell1');
 	c1.addEventListener('click', function() {
-		textContent = [data.coord.lon,]
+		c1.textContent = [data.coord.lon,]
 	});
 	let c2 = document.querySelector('#cell2');
 	c2.addEventListener('click', function() {
-		this.textContent = [data.coord.lat,]
+		c2.textContent = [data.coord.lat,]
 	});
 	let c3 = document.querySelector('#cell3');
 	c3.addEventListener('click', function() {
