@@ -9,7 +9,7 @@
     -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
-	<script src="project.js" defer></script>
+	<script src="test.js" defer></script>
   </head>
 
   <body>
@@ -26,18 +26,29 @@
   
     <!-- 検索欄 -->
     <p>カイロのどの情報を知りたいですか？</p>
-    <button id = "lon">緯度</button>
-    <button id = "lat">経度</button>
-    <button id = "weather">天気</button>
-    <button id = "temp_min">最低気温</button>
-    <button id = "temp_max">最高気温</button>
-    <button id = "humidity">湿度</button>
-    <button id = "speed">風速</button>
-    <button id = "deg">風向</button>
-    <button id = "name">都市名</button>
-
-    <p id = placeholder></p>
-
+    <p>
+      <button id="print">緯度</button>
+      <input type="checkbox" name="kensaku" id="lon" value="lon">
+      <label for="lon">緯度</label>
+      <input type="checkbox" name="kensaku" id="lat" value="lat">
+      <label for="lat">経度</label>
+      <input type="checkbox" name="kensaku" id="weather" value="data.weather[0].description">
+      <label for="weather">天気</label>
+      <input type="checkbox" name="kensaku" id="temp_min" value="main.temp_min">
+      <label for="temp_min">最低気温</label>
+      <input type="checkbox" name="kensaku" id="temp_max" value="data.main.temp_max">
+      <label for="temp_max">最高気温</label>
+      <input type="checkbox" name="kensaku" id="humidity" value="humidity">
+      <label for="humidity">湿度</label>
+      <input type="checkbox" name="kensaku" id="speed" value="speed">
+      <label for="speed">風速</label>
+      <input type="checkbox" name="kensaku" id="deg" value="deg">
+      <label for="deg">風向</label>
+      <input type="checkbox" name="kensaku" id="name" value="name">
+      <label for="name">都市名</label>
+    <p> 
+    <p><button  id = "sendRequest">検索</button></p>
+    <div id = "placeholder"></div>
 
   </body>
 </html>
