@@ -36,31 +36,31 @@ function showResult(resp) {
 	}
 
 	function lonhander() {
-		document.getElementById("status").textcontent = data.coord.lon
+		document.getElementById("placehplder").textcontent = data.coord.lon
 	}
 	function lathander() {
-		document.getElementById("status").textcontent = data.coord.lat
+		document.getElementById("placehplder").textcontent = data.coord.lat
 	}
 	function weatherhander() {
-		document.getElementById("status").textcontent = data.weather[0].description
+		document.getElementById("placehplder").textcontent = data.weather[0].description
 	}
 	function temp_minhander() {
-		document.getElementById("status").textcontent = data.main.temp_min
+		document.getElementById("placehplder").textcontent = data.main.temp_min
 	}
 	function temp_maxhander() {
-		document.getElementById("status").textcontent = data.main.temp_max
+		document.getElementById("placehplder").textcontent = data.main.temp_max
 	}
 	function humidityhander() {
-		document.getElementById("status").textcontent = data.main.humidity
+		document.getElementById("placehplder").textcontent = data.main.humidity
 	}
 	function speedhander() {
-		document.getElementById("status").textcontent = data.wind.speed
+		document.getElementById("placehplder").textcontent = data.wind.speed
 	}
 	function deghander() {
-		document.getElementById("status").textcontent = data.wind.deg
+		document.getElementById("placehplder").textcontent = data.wind.deg
 	}
 	function namehander() {
-		document.getElementById("status").textcontent = data.name
+		document.getElementById("placehplder").textcontent = data.name
 	}
 
 
