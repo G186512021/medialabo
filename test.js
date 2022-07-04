@@ -26,12 +26,10 @@ function showResult(resp) {
 	}
 
 
+    let p;
+    p = document.createElement('p');
 
-	let a = document.querySelector('input[id="lon"]');
-	if (a.checked) {
-		document.getElementById("lon").textContent = data.coord.lon;
-	}
-	/*
+	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 	for (let b of a) {
@@ -54,7 +52,6 @@ function showResult(resp) {
 		}
 		
 	}
-	*/
 	
 	// data をコンソールに出力
 	console.log(data);
