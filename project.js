@@ -1,5 +1,4 @@
 
-
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
