@@ -35,31 +35,31 @@ function showResult(resp) {
 		document.getElementByld("name").onclick = namehander;
 	}
 
-	function lonhander() {
+	function lonhander(e) {
 		document.getElementById("placehplder").textcontent = data.coord.lon
 	}
-	function lathander() {
+	function lathander(e) {
 		document.getElementById("placehplder").textcontent = data.coord.lat
 	}
-	function weatherhander() {
+	function weatherhander(e) {
 		document.getElementById("placehplder").textcontent = data.weather[0].description
 	}
-	function temp_minhander() {
+	function temp_minhander(e) {
 		document.getElementById("placehplder").textcontent = data.main.temp_min
 	}
-	function temp_maxhander() {
+	function temp_maxhander(e) {
 		document.getElementById("placehplder").textcontent = data.main.temp_max
 	}
-	function humidityhander() {
+	function humidityhander(e) {
 		document.getElementById("placehplder").textcontent = data.main.humidity
 	}
-	function speedhander() {
+	function speedhander(e) {
 		document.getElementById("placehplder").textcontent = data.wind.speed
 	}
-	function deghander() {
+	function deghander(e) {
 		document.getElementById("placehplder").textcontent = data.wind.deg
 	}
-	function namehander() {
+	function namehander(e) {
 		document.getElementById("placehplder").textcontent = data.name
 	}
 
