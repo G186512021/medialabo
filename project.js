@@ -27,7 +27,7 @@ function showResult(resp) {
 
 	let c1 = document.querySelector('#cell1');
 	c1.addEventListener('click', function() {
-		this.textContent = [data.coord.lon,]
+		textContent = [data.coord.lon,]
 	});
 	let c2 = document.querySelector('#cell2');
 	c2.addEventListener('click', function() {
