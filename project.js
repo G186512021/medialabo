@@ -38,7 +38,7 @@ function showResult(resp) {
 		if (b.checked) {
 			console.log(b.value);
 			p.textContent = [
-				c.value,
+				b.value,
 			]
 
 		}
