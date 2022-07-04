@@ -25,34 +25,47 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-
-    let p;
-    p = document.createElement('p');
-
-	let a = document.querySelectorAll('input[name="kensaku"]');
-	let aja = document.querySelector('div#placeholder');
-	aja.insertAdjacentElement('afterend', p);
-	for (let b of a) {
-	
-		
-		if (b.checked) {
-			console.log(b.value);
-			p.textContent = [
-				data.coord.lon,
-				data.coord.lat,
-				data.weather[0].description,
-				data.main.temp_min,
-				data.main.temp_max,
-				data.main.humidity,
-				data.wind.speed,
-				data.wind.deg,
-				data.name,
-			]
-
-		}
-		
+	window.onload = function () {
+		document.getElementByld("lon").onclick = lonhander;
+		document.getElementByld("lat").onclick = lathander;
+		document.getElementByld("weather").onclick = weatherhander;
+		document.getElementByld("temp_min").onclick = temp_minhander;
+		document.getElementByld("temp_max").onclick = temp_maxhander;
+		document.getElementByld("humidity").onclick = humidityhander;
+		document.getElementByld("speed").onclick = speedhander;
+		document.getElementByld("deg").onclick = deghander;
+		document.getElementByld("name").onclick = namehander;
 	}
-	
+
+	function lonhander(e) {
+		document.getElementById("status").textcontent = data.coord.lon
+	}
+	function lathander(e) {
+		document.getElementById("status").textcontent = data.coord.lat
+	}
+	function weatherhander(e) {
+		document.getElementById("status").textcontent = data.weather[0].description
+	}
+	function temp_minhander(e) {
+		document.getElementById("status").textcontent = data.main.temp_min
+	}
+	function temp_maxhander(e) {
+		document.getElementById("status").textcontent = data.main.temp_max
+	}
+	function humidityhander(e) {
+		document.getElementById("status").textcontent = data.main.humidity
+	}
+	function speedhander(e) {
+		document.getElementById("status").textcontent = data.wind.speed
+	}
+	function deghander(e) {
+		document.getElementById("status").textcontent = data.wind.deg
+	}
+	function namehander(e) {
+		document.getElementById("status").textcontent = data.name
+	}
+
+
 	// data をコンソールに出力
 	console.log(data);
 
