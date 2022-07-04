@@ -35,31 +35,31 @@ function showResult(resp) {
 		document.getElementByld("name").onclick = namehander;
 	}
 
-	function lonhander(e) {
+	function lonhander() {
 		document.getElementById("status").textcontent = data.coord.lon
 	}
-	function lathander(e) {
+	function lathander() {
 		document.getElementById("status").textcontent = data.coord.lat
 	}
-	function weatherhander(e) {
+	function weatherhander() {
 		document.getElementById("status").textcontent = data.weather[0].description
 	}
-	function temp_minhander(e) {
+	function temp_minhander() {
 		document.getElementById("status").textcontent = data.main.temp_min
 	}
-	function temp_maxhander(e) {
+	function temp_maxhander() {
 		document.getElementById("status").textcontent = data.main.temp_max
 	}
-	function humidityhander(e) {
+	function humidityhander() {
 		document.getElementById("status").textcontent = data.main.humidity
 	}
-	function speedhander(e) {
+	function speedhander() {
 		document.getElementById("status").textcontent = data.wind.speed
 	}
-	function deghander(e) {
+	function deghander() {
 		document.getElementById("status").textcontent = data.wind.deg
 	}
-	function namehander(e) {
+	function namehander() {
 		document.getElementById("status").textcontent = data.name
 	}
 
