@@ -25,25 +25,42 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-
-    let p;
-    p = document.createElement('p');
-
-	let a = document.querySelectorAll('input[name="kensaku"]');
-	let aja = document.querySelector('div#placeholder');
-	aja.insertAdjacentElement('afterend', p);
-	for (let b of a) {
-	
-		
-		if (b.checked) {
-			console.log(b.value);
-			p.textContent = [
-				b.value,
-			]
-
-		}
-		
-	}
+	let c1 = document.querySelector('#cell1');
+	c1.addEventListener('click', function() {
+		this.textContent = [data.coord.lon,]
+	});
+	let c2 = document.querySelector('#cell2');
+	c2.addEventListener('click', function() {
+		this.textContent = [data.coord.lat,]
+	});
+	let c3 = document.querySelector('#cell3');
+	c3.addEventListener('click', function() {
+		this.textContent = [data.weather[0].description,]
+	});
+	let c4 = document.querySelector('#cell4');
+	c4.addEventListener('click', function() {
+		this.textContent = [data.main.temp_min,]
+	});
+	let c5 = document.querySelector('#cell5');
+	c5.addEventListener('click', function() {
+		this.textContent = [data.main.temp_max,]
+	});
+	let c6 = document.querySelector('#cell6');
+	c6.addEventListener('click', function() {
+		this.textContent = [data.main.humidity,]
+	});
+	let c7 = document.querySelector('#cell7');
+	c7.addEventListener('click', function() {
+		this.textContent = [data.wind.speed,]
+	});
+	let c8 = document.querySelector('#cell8');
+	c8.addEventListener('click', function() {
+		this.textContent = [data.wind.deg,]
+	});
+	let c9 = document.querySelector('#cell9');
+	c9.addEventListener('click', function() {
+		this.textContent = [data.name,]
+	});
 	
 	// data をコンソールに出力
 	console.log(data);
