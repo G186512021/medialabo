@@ -33,7 +33,7 @@ function showResult(resp) {
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 
-	if (kensaku[0].checked) {
+	if ('id#lon'.checked) {
 		placeholder.textContent = data.coord.lon;
 	}
 	
