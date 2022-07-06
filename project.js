@@ -33,7 +33,7 @@ function showResult(resp) {
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 
-	if ('id#lon'.checked) {
+	if ('id#lon' = true) {
 		placeholder.textContent = data.coord.lon;
 	}
 	
