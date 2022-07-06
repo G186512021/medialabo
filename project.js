@@ -32,17 +32,9 @@ function showResult(resp) {
 	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
-	for (let b of a) {
-	
-		
-		if (b.checked) {
-			console.log(b.value);
-			p.textContent = [
-				b.value,
-			]
 
-		}
-		
+	if (checkbox[1].checked) {
+		placeholder.textContent = data.coord.lon;
 	}
 	
 	// data をコンソールに出力
