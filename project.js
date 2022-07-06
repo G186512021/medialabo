@@ -1,6 +1,6 @@
 let aj = document.querySelector('#sendRequest');
 aj.addEventListener('click', sendRequest);
-
+	
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
@@ -25,16 +25,63 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-
-    let p;
+	let p;
     p = document.createElement('p');
-
-	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 
-	if ('id#lon' == true) {
-		placeholder.textContent = data.coord.lon;
+	let tex1 = document.querySelector('id#lon');
+	tex1.addEventListener('click',addtext1);
+	function addtext1() {
+		textContent = [data.coord.lon,]
+	}
+
+	let tex2 = document.querySelector('id#lat');
+	tex2.addEventListener('click',addtext2);
+	function addtext2() {
+		textContent = [data.coord.lat,]
+	}
+
+	let tex3 = document.querySelector('id#weather');
+	tex3.addEventListener('click',addtext3);
+	function addtext3() {
+		textContent = [data.weather[0].description,]
+	}
+
+	let tex4 = document.querySelector('id#temp_min');
+	tex4.addEventListener('click',addtext4);
+	function addtext4() {
+		textContent = [data.main.temp_min,]
+	}
+
+	let tex5 = document.querySelector('id#temp_max');
+	tex5.addEventListener('click',addtext5);
+	function addtext5() {
+		textContent = [data.main.temp_max,]
+	}
+
+	let tex6 = document.querySelector('id#humidity');
+	tex6.addEventListener('click',addtext6);
+	function addtext6() {
+		textContent = [data.main.humidity,]
+	}
+
+	let tex7 = document.querySelector('id#speed');
+	tex7.addEventListener('click',addtext7);
+	function addtext7() {
+		textContent = [data.wind.speed,]
+	}
+
+	let tex8 = document.querySelector('id#deg');
+	tex8.addEventListener('click',addtext8);
+	function addtext8() {
+		textContent = [data.wind.deg,]
+	}
+
+	let tex9 = document.querySelector('id#name');
+	tex9.addEventListener('click',addtext9);
+	function addtext9() {
+		textContent = [data.name,]
 	}
 	
 	// data をコンソールに出力
