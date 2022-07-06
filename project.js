@@ -30,7 +30,7 @@ function showResult(resp) {
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 
-	let tex1 = document.querySelector('id#lon');
+	let tex1 = document.querySelector('input[id="lon"]');
 	tex1.addEventListener('click',addtext1);
 	function addtext1() {
 		p.textContent = [data.coord.lon,]
