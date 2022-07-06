@@ -26,17 +26,29 @@
   
     <!-- 検索欄 -->
     <p>カイロのどの情報を知りたいですか？</p>
-    <div id = main>
-      <button class="sendRequest" id="cell1">緯度</button>
-      <button class="sendRequest" id="cell2">経度</button>
-      <button class="sendRequest" id="cell3">天気</button>
-      <button class="sendRequest" id="cell4">最低気温</button>
-      <button class="sendRequest" id="cell5">最高気温</button>
-      <button class="sendRequest" id="cell6">湿度</button>
-      <button class="sendRequest" id="cell7">風速</button>
-      <button class="sendRequest" id="cell8">風向</button>
-      <button class="sendRequest" id="cell9">都市名</button>
-    </div>
+    <p>
+      <input type="checkbox" name="kensaku" id="lon" value="lon">
+      <label for="lon">緯度</label>
+      <input type="checkbox" name="kensaku" id="lat" value="lat">
+      <label for="lat">経度</label>
+      <input type="checkbox" name="kensaku" id="weather" value="description">
+      <label for="weather">天気</label>
+      <input type="checkbox" name="kensaku" id="temp_min" value="temp_min">
+      <label for="temp_min">最低気温</label>
+      <input type="checkbox" name="kensaku" id="temp_max" value="temp_max">
+      <label for="temp_max">最高気温</label>
+      <input type="checkbox" name="kensaku" id="humidity" value="humidity">
+      <label for="humidity">湿度</label>
+      <input type="checkbox" name="kensaku" id="speed" value="speed">
+      <label for="speed">風速</label>
+      <input type="checkbox" name="kensaku" id="deg" value="deg">
+      <label for="deg">風向</label>
+      <input type="checkbox" name="kensaku" id="name" value="name">
+      <label for="name">都市名</label>
+    <p> 
+    <p><button  id = "sendRequest">検索</button></p>
+    <div id = "placeholder"></div>
+
   </body>
 </html>
 
@@ -60,23 +72,6 @@
       height: 5em;
       padding: 2em;
     }
-
-    #main {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-auto-rows: 100px;
-	grid-gap: 10px;
-	width: 800px;
-}
-
-.cell {
-	padding: 10px;
-	border: 1px solid #cfcfcf;
-}
-
-.cell:focus {
-	border: 1px solid black;
-}
 
 
     </style>
