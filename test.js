@@ -4,11 +4,8 @@ aj.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
-	let rs = document.querySelectorAll('input[name="kensaku"]');
-	for(let r of rs) {
-		console.log(r.value);
-		geturl = r.value;
-	}
+	let rs = document.querySelector('input[name="kensaku"]');
+	let geturl = rs.value;
     let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
 
 	// 通信開始
