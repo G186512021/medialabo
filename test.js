@@ -1,11 +1,15 @@
 let aj = document.querySelector('#sendRequest');
 aj.addEventListener('click', sendRequest);
-
+	
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
-    Kairo = '360630';
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
+	let rs = document.querySelectorAll('input[name="year"]');
+	for(let r of rs) {
+		console.log(r.value);
+		geturl = r.value;
+	}
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
 
 	// 通信開始
 	axios.get(url)
@@ -25,32 +29,23 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-
-    let p;
+	let p;
     p = document.createElement('p');
-
-	let a = document.querySelectorAll('input[name="kensaku"]');
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
-	for (let b of a) {
-	
-		
-		if (b.checked) {
-			console.log(b.value);
-			p.textContent = [
-				data.coord.lon,
-				data.coord.lat,
-				data.weather[0].description,
-				data.main.temp_min,
-				data.main.temp_max,
-				data.main.humidity,
-				data.wind.speed,
-				data.wind.deg,
-				data.name,
-			]
 
-		}
-		
+	let tex = document.querySelector('input[name="kensaku"]');
+	tex.addEventListener('click',addtext);
+	function addtext() {
+		p.textContent = [data.coord.lon,
+			data.coord.lat,
+			data.weather[0].description,
+			data.main.temp_min,
+			data.main.temp_max,
+			data.main.humidity,
+			data.wind.speed,
+			data.wind.deg,
+			data.name,]
 	}
 	
 	// data をコンソールに出力
