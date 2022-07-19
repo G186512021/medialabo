@@ -4,7 +4,7 @@ aj.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
-	let rs = document.querySelectorAll('input[name="year"]');
+	let rs = document.querySelectorAll('input[name="kensaku"]');
 	for(let r of rs) {
 		console.log(r.value);
 		geturl = r.value;
