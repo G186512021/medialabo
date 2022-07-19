@@ -5,7 +5,7 @@ aj.addEventListener('click', sendRequest);
 function sendRequest() {
 	// URL を設定
 	let geturl;
-	let rs = document.querySelector('input[name="kensaku"]');
+	let rs = document.querySelectorAll('input[name="kensaku"]');
 	for (let r of rs) {
         if (r.checked) {
             console.log(r.value);
