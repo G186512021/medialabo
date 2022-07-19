@@ -38,8 +38,7 @@ function showResult(resp) {
 	let aja = document.querySelector('div#placeholder');
 	aja.insertAdjacentElement('afterend', p);
 
-	let tex = document.querySelector('input[name="kensaku"]');
-	tex.addEventListener('click',addtext);
+	rs.addEventListener('click',addtext);
 	function addtext() {
 		p.textContent = [data.coord.lon,
 			data.coord.lat,
