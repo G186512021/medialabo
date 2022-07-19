@@ -4,37 +4,15 @@ aj.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
-	let url;
+	let geturl;
 	let rs = document.querySelector('input[name="kensaku"]');
-	let geturl = rs.value;
-	if (geturl == 360630) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 524901) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 993800) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 1816670) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 1850147) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 1880252) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 2147714) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 2643743) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 2968815) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 3451189) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 5128581) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else if (geturl == 5368361) {
-		url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
-	} else {
-		let miss = document.querySelector('div#placeholder');
-		miss.textContent = 'この都市は見つかりません'
-	}
+	for (let r of rs) {
+        if (r.checked) {
+            console.log(r.value);
+			geturl = r.value;
+        }
+    }
+	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
 
 
 	// 通信開始
