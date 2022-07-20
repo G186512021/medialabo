@@ -38,7 +38,7 @@ function showResult(resp) {
     let p1 = document.createElement('p');
 	let aja = document.querySelector('td#name');
 	aja.insertAdjacentElement('beforeend', p1);
-	aj.addEventListener('click',addtext1);
+	aj.addEventListener('mouseleave',addtext1);
 	function addtext1() {
 		p1.textContent = [data.name,]
 	}
