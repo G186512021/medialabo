@@ -33,16 +33,15 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-	if ('input[id=city1]'.checked) {
-		let ka11 = document.createElement('p');
-		let ajaka11 = document.querySelector('td#11');
-		ajaka11.insertAdjacentElement('afterend', ka11);
-		aj.addEventListener('click',addtext11);
-		function addtext11() {
-			p.textcontent = [data.crrod.lon,]
-		}
-	}
 
+
+    let p1 = document.createElement('p');
+	let aja = document.querySelector('td#name');
+	aja.insertAdjacentElement('afterend', p1);
+	aj.addEventListener('click',addtext1);
+	function addtext1() {
+		p.textContent = [data.coord.lon,]
+	}
 	
 	// data をコンソールに出力
 	console.log(data);
