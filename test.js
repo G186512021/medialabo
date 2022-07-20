@@ -42,7 +42,14 @@ function showResult(resp) {
 	function addtext1() {
 		p1.textContent = [data.name,]
 	}
-
+	let p2 = document.createElement('p');
+	let aja2 = document.querySelector('td#11');
+	aja2.insertAdjacentElement('beforeend', p2);
+	aj.addEventListener('mouseleave',addtext2);
+	function addtext2() {
+		p2.textContent = [data.coord.lon,]
+	}
+	
 
 
 	
