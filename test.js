@@ -40,8 +40,10 @@ function showResult(resp) {
 	aja.insertAdjacentElement('afterend', p1);
 	aj.addEventListener('click',addtext1);
 	function addtext1() {
-		p.textContent = [data.coord.lon,]
+		p1.textContent = [data.name,]
 	}
+
+
 	
 	// data をコンソールに出力
 	console.log(data);
