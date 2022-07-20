@@ -35,6 +35,8 @@ function showResult(resp) {
 
 
 
+	let del1 = document.querySelector('td#name');
+	del1.remove()
     let p1 = document.createElement('p');
 	let aja = document.querySelector('td#name');
 	aja.insertAdjacentElement('beforeend', p1);
