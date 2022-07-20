@@ -33,24 +33,16 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-	let p;
-    p = document.createElement('p');
-	let aja = document.querySelector('div#placeholder');
-	aja.insertAdjacentElement('afterend', p);
-
-	let tex = document.querySelector('input[name="kensaku"]');
-	tex.addEventListener('click',addtext);
-	function addtext() {
-		p.textContent = [data.coord.lon,
-			data.coord.lat,
-			data.weather[0].description,
-			data.main.temp_min,
-			data.main.temp_max,
-			data.main.humidity,
-			data.wind.speed,
-			data.wind.deg,
-			data.name,]
+	if ('input[id=city1]'.checked) {
+		let ka11 = document.createElement('p');
+		let ajaka11 = document.querySelector('td#11');
+		ajaka11.insertAdjacentElement('afterend', ka11);
+		aj.addEventListener('click',addtext11);
+		function addtext11() {
+			p.textcontent = [data.crrod.lon,]
+		}
 	}
+
 	
 	// data をコンソールに出力
 	console.log(data);
