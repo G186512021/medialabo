@@ -1,4 +1,4 @@
-let aj = document.querySelector('#sendRequest');
+let aj = document.querySelector('#city');
 aj.addEventListener('click', sendRequest);
 	
 // 通信を開始する処理
