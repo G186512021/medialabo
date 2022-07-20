@@ -4,8 +4,16 @@ aj.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
-    Kairo = '360630';
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+Kairo+'.json';
+	let geturl;
+	let rs = document.querySelectorAll('input[name="kensaku"]');
+	for (let r of rs) {
+        if (r.checked) {
+            console.log(r.value);
+			geturl = r.value;
+        }
+	}
+	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+geturl+'.json';
+
 
 	// 通信開始
 	axios.get(url)
@@ -25,64 +33,73 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-	let p;
-    p = document.createElement('p');
-	let aja = document.querySelector('div#placeholder');
-	aja.insertAdjacentElement('afterend', p);
 
-	let tex1 = document.querySelector('input[id="lon"]');
-	tex1.addEventListener('click',addtext1);
+
+    let p1 = document.createElement('p');
+	let aja1 = document.querySelector('td#name');
+	aja1.insertAdjacentElement('beforeend', p1);
+	aj.addEventListener('mouseleave',addtext1);
 	function addtext1() {
-		p.textContent = [data.coord.lon,]
+		p1.textContent = [data.name,]
 	}
-
-	let tex2 = document.querySelector('input[id="lat"]');
-	tex2.addEventListener('click',addtext2);
+	let p2 = document.createElement('p');
+	let aja2 = document.querySelector('td#lon');
+	aja2.insertAdjacentElement('beforeend', p2);
+	aj.addEventListener('mouseleave',addtext2);
 	function addtext2() {
-		p.textContent = [data.coord.lat,]
+		p2.textContent = [data.coord.lon,]
 	}
-
-	let tex3 = document.querySelector('input[id="weather"]');
-	tex3.addEventListener('click',addtext3);
+	let p3 = document.createElement('p');
+	let aja3 = document.querySelector('td#lat');
+	aja3.insertAdjacentElement('beforeend', p3);
+	aj.addEventListener('mouseleave',addtext3);
 	function addtext3() {
-		p.textContent = [data.weather[0].description,]
+		p3.textContent = [data.coord.lat,]
 	}
-
-	let tex4 = document.querySelector('input[id="temp_min"]');
-	tex4.addEventListener('click',addtext4);
+	let p4 = document.createElement('p');
+	let aja4 = document.querySelector('td#weather');
+	aja4.insertAdjacentElement('beforeend', p4);
+	aj.addEventListener('mouseleave',addtext4);
 	function addtext4() {
-		p.textContent = [data.main.temp_min,]
+		p4.textContent = [data.weather[0].description,]
 	}
-
-	let tex5 = document.querySelector('input[id="temp_max"]');
-	tex5.addEventListener('click',addtext5);
+	let p5 = document.createElement('p');
+	let aja5 = document.querySelector('td#temp_min');
+	aja5.insertAdjacentElement('beforeend', p5);
+	aj.addEventListener('mouseleave',addtext5);
 	function addtext5() {
-		p.textContent = [data.main.temp_max,]
+		p5.textContent = [data.main.temp_min,]
 	}
-
-	let tex6 = document.querySelector('input[id="humidity"]');
-	tex6.addEventListener('click',addtext6);
+	let p6 = document.createElement('p');
+	let aja6 = document.querySelector('td#temp_max');
+	aja6.insertAdjacentElement('beforeend', p6);
+	aj.addEventListener('mouseleave',addtext6);
 	function addtext6() {
-		p.textContent = [data.main.humidity,]
+		p6.textContent = [data.main.temp_max,]
 	}
-
-	let tex7 = document.querySelector('input[id="speed"]');
-	tex7.addEventListener('click',addtext7);
+	let p7 = document.createElement('p');
+	let aja7 = document.querySelector('td#humidity');
+	aja7.insertAdjacentElement('beforeend', p7);
+	aj.addEventListener('mouseleave',addtext7);
 	function addtext7() {
-		p.textContent = [data.wind.speed,]
+		p7.textContent = [data.main.humidity,]
 	}
-
-	let tex8 = document.querySelector('input[id="deg"]');
-	tex8.addEventListener('click',addtext8);
+	let p8 = document.createElement('p');
+	let aja8 = document.querySelector('td#speed');
+	aja8.insertAdjacentElement('beforeend', p8);
+	aj.addEventListener('mouseleave',addtext8);
 	function addtext8() {
-		p.textContent = [data.wind.deg,]
+		p8.textContent = [data.wind.speed,]
+	}
+	let p9 = document.createElement('p');
+	let aja9 = document.querySelector('td#deg');
+	aja9.insertAdjacentElement('beforeend', p9);
+	aj.addEventListener('mouseleave',addtext9);
+	function addtext9() {
+		p9.textContent = [data.wind.deg,]
 	}
 
-	let tex9 = document.querySelector('input[id="name"]');
-	tex9.addEventListener('click',addtext9);
-	function addtext9() {
-		p.textContent = [data.name,]
-	}
+
 	
 	// data をコンソールに出力
 	console.log(data);

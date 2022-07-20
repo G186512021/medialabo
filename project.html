@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>カイロはあったカイロ</title>
+    <title>世界の天気</title>
 
      <!-- 第四、五回課題
     <script src="weather.js" defer></script>
@@ -14,7 +14,7 @@
 
   <body>
     <header>
-        <h1> カイロはあったカイロ </h1>
+        <h1> 今日の天気 </h1>
     </header>
   
       <!-- 第四、五回課題
@@ -24,30 +24,53 @@
       <button id="print">🔍</button>
       -->
   
-    <!-- 検索欄 -->
-    <p>カイロのどの情報を知りたいですか？</p>
-    <p>
-      <input type="checkbox" name="kensaku" id="lon" value="lon">
-      <label for="lon">緯度</label>
-      <input type="checkbox" name="kensaku" id="lat" value="lat">
-      <label for="lat">経度</label>
-      <input type="checkbox" name="kensaku" id="weather" value="description">
-      <label for="weather">天気</label>
-      <input type="checkbox" name="kensaku" id="temp_min" value="temp_min">
-      <label for="temp_min">最低気温</label>
-      <input type="checkbox" name="kensaku" id="temp_max" value="temp_max">
-      <label for="temp_max">最高気温</label>
-      <input type="checkbox" name="kensaku" id="humidity" value="humidity">
-      <label for="humidity">湿度</label>
-      <input type="checkbox" name="kensaku" id="speed" value="speed">
-      <label for="speed">風速</label>
-      <input type="checkbox" name="kensaku" id="deg" value="deg">
-      <label for="deg">風向</label>
-      <input type="checkbox" name="kensaku" id="name" value="name">
-      <label for="name">都市名</label>
-    <p> 
-    <p><button  id = "sendRequest">検索</button></p>
-    <div id = "placeholder"></div>
+      <section>
+        <h2>検索したい地域を選んでね</h2>
+        <input type="radio" name="kensaku" id="city1" value="360630">
+        <label for="kairo">カイロ</label>
+        <input type="radio" name="kensaku" id="city2" value="524901">
+        <label for="moscow">モスクワ</label>
+        <input type="radio" name="kensaku" id="city3" value="993800">
+        <label for="johannesburg">ヨハネスブルク</label>
+        <input type="radio" name="kensaku" id="city4" value="1816670">
+        <label for="beijing">北京</label>
+        <input type="radio" name="kensaku" id="city5" value="1850147">
+        <label for="tokyo">東京</label>
+        <input type="radio" name="kensaku" id="city6" value="1880252">
+        <label for="singapore">シンガポール</label>
+        <input type="radio" name="kensaku" id="city7" value="2147714">
+        <label for="sydney">シドニー</label>
+        <input type="radio" name="kensaku" id="city8" value="2643743">
+        <label for="london">ロンドン</label>
+        <input type="radio" name="kensaku" id="city9" value="2968815">
+        <label for="paris">パリ</label>
+        <input type="radio" name="kensaku" id="citya" value="3451189">
+        <label for="riodejaneiro">リオデジャネイロ</label>
+        <input type="radio" name="kensaku" id="cityb" value="5128581">
+        <label for="newyork">ニューヨーク</label>
+        <input type="radio" name="kensaku" id="cityc" value="5368361">
+        <label for="losangeles">ロサンゼルス</label>
+
+        <p><button  id = "sendRequest">検索</button></p>
+        <div>
+          <div>
+            <table>
+              <tr>
+                <td>都市名</td><td>緯度</td> <td>経度</td>
+                <td>天気</td> <td>最低気温</td> <td>最高気温</td>
+                <td>湿度</td> <td>風速</td> <td>風向</td>
+              </tr>
+        
+              <tr>
+                <td id = "name"></td><td id = "lon"></td> <td id = "lat"></td>
+                <td id = "weather"></td> <td id = "temp_min"></td> <td id = "temp_max"></td>
+                <td id = "humidity"></td> <td id = "speed"></td> <td id = "deg"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </section>
 
   </body>
 </html>
@@ -58,20 +81,44 @@
     }
     
     body {
-      background-color: antiquewhite;
+      background-color: white;
     }
     
     h1 {
       font-size: 3em;
-      color: rgb(96, 0, 0);
+      color: rgba(0, 0, 0, 0.656);
       text-align: left;
     }
     
     header, footer {
-      background-color: rgb(255, 166, 0);
+      background-color: rgb(138, 200, 221);
       height: 5em;
       padding: 2em;
     }
 
+    table {
+      width: 80%;
+      border:solid 2px #1d1f4e;
+    }
+
+    tr {
+      height: 80px;
+      border:solid 1px #1d1f4e;
+    }
+
+    td {
+      text-align: left;
+      padding-left: 24px;
+      border:solid 1px #1d1f4e;
+      vertical-align: middle;
+    }
+
+    td:first-child{
+      color: #fff;
+      border: solid 1px #eee;
+      background-color: #1d1f4e;
+      text-align: center;
+      padding-left: 0;
+    }
 
     </style>
