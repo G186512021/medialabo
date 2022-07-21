@@ -110,7 +110,7 @@ let del = document.querySelector('#reset');
 del.addEventListener('click', reset);
 let del1 = document.querySelector('td#name');
 function reset() {
-	del1.remove()
+	del1 == " "
 }
 
 // 通信エラーが発生した時の処理
