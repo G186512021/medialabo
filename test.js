@@ -99,13 +99,18 @@ function showResult(resp) {
 		p9.textContent = [data.wind.deg,]
 	}
 
-
-	
 	// data をコンソールに出力
 	console.log(data);
 
 	// data.x を出力
 	console.log(data.x);
+}
+
+let reset = document.querySelector('#reset');
+reset.addEventListener('click', reset);
+let del1 = document.querySelector('td#name');
+function reset() {
+	del1.remove()
 }
 
 // 通信エラーが発生した時の処理
