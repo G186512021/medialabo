@@ -108,9 +108,9 @@ function showResult(resp) {
 
 let del = document.querySelector('#reset');
 del.addEventListener('click', reset);
-let del1 = document.querySelector('td#name');
+let del1 = document.getElementById('name');
 function reset() {
-	del1 == " "
+	Element.innerHTML = '<td> </td>'
 }
 
 // 通信エラーが発生した時の処理
