@@ -35,12 +35,10 @@ function showResult(resp) {
 
 
 
-    let p1 = document.createElement('p');
 	let aja1 = document.querySelector('td#name');
-	aja1.insertAdjacentElement('beforeend', p1);
 	aj.addEventListener('mouseleave',addtext1);
 	function addtext1() {
-		p1.textContent = [data.name,]
+		aja1.textContent = [data.name,]
 	}
 	let p2 = document.createElement('p');
 	let aja2 = document.querySelector('td#lon');
@@ -104,13 +102,6 @@ function showResult(resp) {
 
 	// data.x を出力
 	console.log(data.x);
-}
-
-let del = document.querySelector('#reset');
-del.addEventListener('click', reset);
-let del1 = document.getElementById('name');
-function reset() {
-	Element.innerHTML = '<td> </td>'
 }
 
 // 通信エラーが発生した時の処理
