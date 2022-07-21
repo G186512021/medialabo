@@ -106,8 +106,8 @@ function showResult(resp) {
 	console.log(data.x);
 }
 
-let reset = document.querySelector('#reset');
-reset.addEventListener('click', reset);
+let del = document.querySelector('#reset');
+del.addEventListener('click', reset);
 let del1 = document.querySelector('td#name');
 function reset() {
 	del1.remove()
